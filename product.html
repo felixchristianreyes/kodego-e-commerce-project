@@ -1,865 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- BOOTSTRAP -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <!-- FONT AWESOME -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- External CSS-->
-    <link rel="stylesheet" href="style.css">
-    <title>Coffee To Go | All Products</title>
-    <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
 
-    
-  </head>
-  <body>
-    <!-- BACKGROUND -->
-    <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div id="page" class="container d-flex flex-column p-0">
-      <!-- TOP NAV -->
-      <div class="sticky-top">
-        <div class="top-nav-prod container d-flex p-2">
-          <!-- LOGO -->
-          <div
-            class="container col-2 d-flex align-content-center justify-content-center p-3"
-          >
-            <a href="homepage.html"
-              ><img src="images\logo-dark.svg" alt="" class="logo-prod"
-            /></a>
-          </div>
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- External CSS-->
+  <link rel="stylesheet" href="style.css">
+  <title>Coffee To Go | All Products</title>
+  <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
 
-          <!-- CATEGORIES -->
-          <div
-            id="category"
-            class="container d-flex justify-content-around col-7 mt-2"
-          >
-            <div class="position-relative text-center">
-              <a href="#brewed">
-                <img
-                  src="images\cat-coffee.svg"
-                  alt=""
-                  class="category-item mb-1"
-                />
-                <div>FRESHLY BREWED</div></a
-              >
-            </div>
-            <div class="position-relative text-center">
-              <a href="#baked">
-                <img
-                  src="images\cat-pastry.svg"
-                  alt=""
-                  class="category-item mb-1"
-                />
-                <div>FRESHLY BAKED</div></a
-              >
-            </div>
 
-            <div class="position-relative text-center">
-              <a href="product.html#top">
-                <img
-                  src="images\cat-all.svg"
-                  alt=""
-                  class="category-item mb-1"
-                />
-                <div>ALL PRODUCTS</div></a
-              >
-            </div>
+</head>
 
-            <div class="position-relative text-center">
-              <a href="#beans">
-                <img
-                  src="images\cat-beans.svg"
-                  alt=""
-                  class="category-item mb-1"
-                />
-                <div>BREW AT HOME</div></a
-              >
-            </div>
-            <div class="position-relative text-center">
-              <a href="#merch">
-                <img
-                  src="images\cat-merch.svg"
-                  alt=""
-                  class="category-item mb-1"
-                />
-                <div>MERCH</div></a
-              >
-            </div>
-          </div>
+<body>
+  <!-- BACKGROUND -->
+  <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
 
-          <!-- SIGN IN-UP -->
-          <div
-            class="opacity-p8 container col-3 d-flex align-self-center justify-content-center"
-          >
-            <button type="button" class="custom-button mx-1">
-              <a href="">SIGN IN</a>
-            </button>
-            <button type="button" class="custom-button mx-1">
-              <a href="">SIGN UP</a>
-            </button>
-            <button
-              type="button"
-              class="bag-button position-relative text-center mx-2"
-            >
-              <i class="fa-solid fa-bag-shopping bag text-brown"></i>
-              <span
-                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-              >
-                2
-              </span>
-            </button>
-          </div>
-
-          <!-- NAV TAB -->
+  <div id="page" class="container d-flex flex-column p-0">
+    <!-- TOP NAV -->
+    <div class="sticky-top">
+      <div class="top-nav-prod container d-flex p-2">
+        <!-- LOGO -->
+        <div class="container col-2 d-flex align-content-center justify-content-center p-3">
+          <a href="homepage.html"><img src="images\logo-dark.svg" alt="" class="logo-prod" /></a>
         </div>
-        <div
-          class="container navbar navbar-expand-lg navbar-light bg-white py-2 px-0"
-        >
-          <div class="container-fluid px-0">
-            <div class="nav-item text-burly" href="#">Show:</div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >All</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Best Sellers</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Favorites</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Sort by
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="#">Price: Low to High</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Price: High to Low</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Newest</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Rating</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
 
-              <!-- SEARCH BAR -->
-              <form action="product.html" class="d-flex searchbar w-25">
-                <input
-                  class="form-control m-0 search-input"
-                  type="search"
-                  placeholder="Search Products"
-                  aria-label="Search Products"
-                />
-                <button class="btn btn-light m-0" type="submit">
-                  <img
-                    src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon3/mt-search.svg"
-                    alt=""
-                    width="20px"
-                  />
-                </button>
-              </form>
-            </div>
+        <!-- CATEGORIES -->
+        <div id="category" class="container d-flex justify-content-around col-7 mt-2">
+          <div class="position-relative text-center">
+            <a href="#brewed">
+              <img src="images\cat-coffee.svg" alt="" class="category-item mb-1" />
+              <div>FRESHLY BREWED</div>
+            </a>
+          </div>
+          <div class="position-relative text-center">
+            <a href="#baked">
+              <img src="images\cat-pastry.svg" alt="" class="category-item mb-1" />
+              <div>FRESHLY BAKED</div>
+            </a>
+          </div>
+
+          <div class="position-relative text-center">
+            <a href="product.html#top">
+              <img src="images\cat-all.svg" alt="" class="category-item mb-1" />
+              <div>ALL PRODUCTS</div>
+            </a>
+          </div>
+
+          <div class="position-relative text-center">
+            <a href="#beans">
+              <img src="images\cat-beans.svg" alt="" class="category-item mb-1" />
+              <div>BREW AT HOME</div>
+            </a>
+          </div>
+          <div class="position-relative text-center">
+            <a href="#merch">
+              <img src="images\cat-merch.svg" alt="" class="category-item mb-1" />
+              <div>MERCH</div>
+            </a>
           </div>
         </div>
+
+        <!-- SIGN IN-UP -->
+        <div class="opacity-p8 container col-3 d-flex align-self-center justify-content-center">
+          <button type="button" class="custom-button mx-1">
+            <a href="">SIGN IN</a>
+          </button>
+          <button type="button" class="custom-button mx-1">
+            <a href="">SIGN UP</a>
+          </button>
+          <button type="button" class="bag-button position-relative text-center mx-2">
+            <i class="fa-solid fa-bag-shopping bag text-brown"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              2
+            </span>
+          </button>
+        </div>
+
+        <!-- NAV TAB -->
       </div>
+      <div class="container navbar navbar-expand-lg navbar-light bg-white py-2 px-0">
+        <div class="container-fluid px-0">
+          <div class="nav-item text-burly" href="#">Show:</div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Best Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Favorites</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Sort by
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Price: Low to High</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Price: High to Low</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Newest</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Rating</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
 
-      <div id="main_content" class="container p-0">
-        <!-- ADS CAROUSEL -->
-        <div id="top" class="anchor-top"></div>
-        <div id="ads-carousel" class="container p-0 w-75 mb-3">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide carousel-fade"
-            data-bs-ride="true"
-          >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-            </div>
-
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="4000">
-                <a href="promopage.html">
-                  <img src="images\ads1.gif" class="d-block w-100" alt="..."
-                /></a>
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <a href="promopage.html#new">
-                  <img src="images\ads2.gif" class="d-block w-100" alt="..."
-                /></a>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <!-- SEARCH BAR -->
+            <form action="product.html" class="d-flex searchbar w-25">
+              <input class="form-control m-0 search-input" type="search" placeholder="Search Products"
+                aria-label="Search Products" />
+              <button class="btn btn-light m-0" type="submit">
+                <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon3/mt-search.svg"
+                  alt="" width="20px" />
+              </button>
+            </form>
           </div>
-        </div>
-
-        <!-- LISTING -->
-        <div class="container">
-          <img src="images\title-all-prod.svg" alt="" class="img-fluid mb-3" />
-        </div>
-        <div class="listing container mt-2 p-0">
-          <!-- FRESHLY BREWED -->
-          <div id="brewed" class="anchor-top"></div>
-          <div class="container listing-category mt-3">
-            <div id="fresh-brew" class="anchor-top"></div>
-            <h2
-              class="category-title text-center fw-bold text-brown opacity-75"
-            >
-              Freshly Brewed Coffee & Tea
-            </h2>
-            <div id="iced" class="anchor-top"></div>
-            <h5 class="poppins">ICED COFFEE & TEA</h5>
-            <div class="row mb-2 p-1">
-              <!-- PRODUCT 1 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\latte.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Iced Latte</h5>
-                      <div class="text-center price">&#8369;125</div>
-                    </div>
-                    <div>
-                      <span class="tags-bs px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 2 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\mocha.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Iced Mocha</h5>
-                      <div class="text-center price">&#8369;150</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">add tag here</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-solid fa-heart icon-like text-danger"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 3 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\americano.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Iced Americano</h5>
-                      <div class="text-center price">&#8369;100</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">add tag here</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 4 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\orange-espresso.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">
-                        Iced Orange Espresso
-                      </h5>
-                      <div class="text-center price">&#8369;150</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">add tag here</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 5 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\cappuccino.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Iced Cappuccino</h5>
-                      <div class="text-center">
-                        <span class="text-muted price discount px-2"
-                          >&#8369;150</span
-                        ><span class="text-danger price">&#8369;120</span>
-                      </div>
-                    </div>
-                    <div class="">
-                      <span class="tags-as px-1">Anniversary Special</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 6 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\macha.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">
-                        Iced Macha Green Tea
-                      </h5>
-                      <div class="text-center price">&#8369;200</div>
-                    </div>
-                    <div class="">
-                      <span class="tags-np px-1">New Product</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="hot" class="anchor-top"></div>
-            <h5 class="poppins">HOT COFFEE & TEA</h5>
-            <div class="row mb-2 p-1">
-              <!-- PRODUCT 1 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\h-americano.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Hot Americano</h5>
-                      <div class="text-center price">&#8369;100</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-bs px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 2 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\h-cappucino.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Hot Cappuccino</h5>
-                      <div class="text-center">
-                        <span class="text-muted price discount px-2"
-                          >&#8369;125</span
-                        ><span class="text-danger price">&#8369;100</span>
-                      </div>
-                    </div>
-                    <div class="">
-                      <span class="tags-as px-1">Anniversary Special</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 3 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\h-tea.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Hot Green Tea</h5>
-                      <div class="text-center price">&#8369;200</div>
-                    </div>
-                    <div class="">
-                      <span class="tags-np px-1">New Product</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- FRESHLY BAKED -->
-          <div id="baked" class="anchor-top"></div>
-          <div class="container listing-category mt-3">
-            <h2
-              class="category-title text-center fw-bold text-brown opacity-75"
-            >
-              Freshly Baked Pastries
-            </h2>
-            <h5 class="poppins invisible">Sub Category</h5>
-            <div class="row mb-2 p-1">
-              <!-- PRODUCT 1 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\croissant.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Croissant</h5>
-                      <div class="text-center price">&#8369;200</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 2 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\cheesecake.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">
-                        Strawberry Cheesecake
-                      </h5>
-                      <div class="text-center price">&#8369;175</div>
-                    </div>
-                    <div class="">
-                      <span class="tags-bs px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-solid fa-heart icon-like text-danger"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- COFFEE BEANS -->
-          <div id="beans" class="anchor-top"></div>
-          <div class="container listing-category mt-3">
-            <h2
-              class="category-title text-center fw-bold text-brown opacity-75"
-            >
-              Premium Roasted Coffee Beans
-            </h2>
-            <h5 class="poppins invisible">Sub Category</h5>
-            <div class="row mb-2 p-1">
-              <!-- PRODUCT 1 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\robusta.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">
-                        Robusta Coffee Beans
-                      </h5>
-                      <div class="text-center price">Starts at &#8369;100</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 2-->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img
-                    src="images\arabica.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">
-                        Arabica Coffee Beans
-                      </h5>
-                      <div class="text-center price">Starts at &#8369;100</div>
-                    </div>
-                    <div class="">
-                      <span class="tags-bs px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- MERCH -->
-          <div id="merch" class="anchor-top"></div>
-          <div class="container listing-category mt-3">
-            <h2
-              class="category-title text-center fw-bold text-brown opacity-75"
-            >
-              Merch for the Coffee Lovers
-            </h2>
-            <h5 class="poppins invisible">Sub Category</h5>
-            <div class="row mb-2 p-1">
-              <!-- PRODUCT 1 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\mug.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Coffee Mug</h5>
-                      <div class="text-center price">&#8369;125</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PRODUCT 2 -->
-              <div class="col-md-4 col-lg-3 col-xl-2 p-2">
-                <div class="card my-2 position-relative">
-                  <a href="item.html" class="stretched-link"></a>
-                  <img src="images\glass.png" class="card-img-top" alt="..." />
-                  <div class="card-body py-2">
-                    <div class="card-title-container">
-                      <h5 class="card-title text-center">Glass Tumbler</h5>
-                      <div class="text-center price">&#8369;200</div>
-                    </div>
-                    <div class="invisible">
-                      <span class="tags-as px-1">Best Seller</span>
-                    </div>
-                    <div class="container d-flex p-0 my-2">
-                      <div class="w-25">
-                        <a class="fa-regular fa-heart icon-like icon-prop"></a>
-                      </div>
-                      <div class="w-75 text-end">
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-solid fa-star icon-prop"></i>
-                        <i class="fa-regular fa-star icon-prop"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="anchor-bottom"></div>
-      </div>
-
-      <div
-        class="footer container d-flex align-items-center justify-content-between"
-      >
-        <div class="poppins text-burly">&copy; 2022 COFFEE TO GO</div>
-        <!-- SOC MED -->
-        <div class="d-flex align-items-center">
-          <div class="poppins text-burly mx-2">FOLLOW US ON</div>
-          <a href="">
-            <img
-              src="https://img.icons8.com/ios/250/deb887/facebook-new.png"
-              alt="Facebook"
-              class="soc-med mx-2"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://img.icons8.com/ios/250/deb887/instagram-new.png"
-              alt="Instagram"
-              class="soc-med mx-2"
-          /></a>
-          <a href="">
-            <img
-              src="https://img.icons8.com/ios/250/deb887/twitter.png"
-              alt="Twitter"
-              class="soc-med mx-2"
-          /></a>
         </div>
       </div>
     </div>
-  </body>
+
+    <div id="main_content" class="container p-0">
+      <!-- ADS CAROUSEL -->
+      <div id="top" class="anchor-top"></div>
+      <div id="ads-carousel" class="container p-0 w-75 mb-3">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <a href="promopage.html">
+                <img src="images\ads1.gif" class="d-block w-100" alt="..." /></a>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <a href="promopage.html#new">
+                <img src="images\ads2.gif" class="d-block w-100" alt="..." /></a>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- LISTING -->
+      <div class="container">
+        <img src="images\title-all-prod.svg" alt="" class="img-fluid mb-3" />
+      </div>
+      <div class="listing container mt-2 p-0">
+        <!-- FRESHLY BREWED -->
+        <div id="brewed" class="anchor-top"></div>
+        <div class="container listing-category mt-3">
+          <div id="fresh-brew" class="anchor-top"></div>
+          <h2 class="category-title text-center fw-bold text-brown opacity-75">
+            Freshly Brewed Coffee & Tea
+          </h2>
+          <div id="iced" class="anchor-top"></div>
+          <h5 class="poppins">ICED COFFEE & TEA</h5>
+          <div class="row mb-2 p-1">
+            <!-- PRODUCT 1 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\latte.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Iced Latte</h5>
+                    <div class="text-center price">&#8369;125</div>
+                  </div>
+                  <div>
+                    <span class="tags-bs px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\mocha.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Iced Mocha</h5>
+                    <div class="text-center price">&#8369;150</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">add tag here</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-solid fa-heart icon-like text-danger"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\americano.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Iced Americano</h5>
+                    <div class="text-center price">&#8369;100</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">add tag here</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 4 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\orange-espresso.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">
+                      Iced Orange Espresso
+                    </h5>
+                    <div class="text-center price">&#8369;150</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">add tag here</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\cappuccino.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Iced Cappuccino</h5>
+                    <div class="text-center">
+                      <span class="text-muted price discount px-2">&#8369;150</span><span
+                        class="text-danger price">&#8369;120</span>
+                    </div>
+                  </div>
+                  <div class="">
+                    <span class="tags-as px-1">Anniversary Special</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\macha.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">
+                      Iced Macha Green Tea
+                    </h5>
+                    <div class="text-center price">&#8369;200</div>
+                  </div>
+                  <div class="">
+                    <span class="tags-np px-1">New Product</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="hot" class="anchor-top"></div>
+          <h5 class="poppins">HOT COFFEE & TEA</h5>
+          <div class="row mb-2 p-1">
+            <!-- PRODUCT 1 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\h-americano.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Hot Americano</h5>
+                    <div class="text-center price">&#8369;100</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-bs px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\h-cappucino.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Hot Cappuccino</h5>
+                    <div class="text-center">
+                      <span class="text-muted price discount px-2">&#8369;125</span><span
+                        class="text-danger price">&#8369;100</span>
+                    </div>
+                  </div>
+                  <div class="">
+                    <span class="tags-as px-1">Anniversary Special</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\h-tea.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Hot Green Tea</h5>
+                    <div class="text-center price">&#8369;200</div>
+                  </div>
+                  <div class="">
+                    <span class="tags-np px-1">New Product</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRESHLY BAKED -->
+        <div id="baked" class="anchor-top"></div>
+        <div class="container listing-category mt-3">
+          <h2 class="category-title text-center fw-bold text-brown opacity-75">
+            Freshly Baked Pastries
+          </h2>
+          <h5 class="poppins invisible">Sub Category</h5>
+          <div class="row mb-2 p-1">
+            <!-- PRODUCT 1 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\croissant.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Croissant</h5>
+                    <div class="text-center price">&#8369;200</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\cheesecake.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">
+                      Strawberry Cheesecake
+                    </h5>
+                    <div class="text-center price">&#8369;175</div>
+                  </div>
+                  <div class="">
+                    <span class="tags-bs px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-solid fa-heart icon-like text-danger"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COFFEE BEANS -->
+        <div id="beans" class="anchor-top"></div>
+        <div class="container listing-category mt-3">
+          <h2 class="category-title text-center fw-bold text-brown opacity-75">
+            Premium Roasted Coffee Beans
+          </h2>
+          <h5 class="poppins invisible">Sub Category</h5>
+          <div class="row mb-2 p-1">
+            <!-- PRODUCT 1 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\robusta.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">
+                      Robusta Coffee Beans
+                    </h5>
+                    <div class="text-center price">Starts at &#8369;100</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 2-->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\arabica.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">
+                      Arabica Coffee Beans
+                    </h5>
+                    <div class="text-center price">Starts at &#8369;100</div>
+                  </div>
+                  <div class="">
+                    <span class="tags-bs px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MERCH -->
+        <div id="merch" class="anchor-top"></div>
+        <div class="container listing-category mt-3">
+          <h2 class="category-title text-center fw-bold text-brown opacity-75">
+            Merch for the Coffee Lovers
+          </h2>
+          <h5 class="poppins invisible">Sub Category</h5>
+          <div class="row mb-2 p-1">
+            <!-- PRODUCT 1 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\mug.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Coffee Mug</h5>
+                    <div class="text-center price">&#8369;125</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+              <div class="card my-2 position-relative">
+                <a href="item.html" class="stretched-link"></a>
+                <img src="images\glass.png" class="card-img-top" alt="..." />
+                <div class="card-body py-2">
+                  <div class="card-title-container">
+                    <h5 class="card-title text-center">Glass Tumbler</h5>
+                    <div class="text-center price">&#8369;200</div>
+                  </div>
+                  <div class="invisible">
+                    <span class="tags-as px-1">Best Seller</span>
+                  </div>
+                  <div class="container d-flex p-0 my-2">
+                    <div class="w-25">
+                      <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                    </div>
+                    <div class="w-75 text-end">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="anchor-bottom"></div>
+    </div>
+
+    <div class="footer container d-flex align-items-center justify-content-between">
+      <div class="poppins text-burly">&copy; 2022 COFFEE TO GO</div>
+      <!-- SOC MED -->
+      <div class="d-flex align-items-center">
+        <div class="poppins text-burly mx-2">FOLLOW US ON</div>
+        <a href="">
+          <img src="https://img.icons8.com/ios/250/deb887/facebook-new.png" alt="Facebook" class="soc-med mx-2" />
+        </a>
+        <a href="">
+          <img src="https://img.icons8.com/ios/250/deb887/instagram-new.png" alt="Instagram" class="soc-med mx-2" /></a>
+        <a href="">
+          <img src="https://img.icons8.com/ios/250/deb887/twitter.png" alt="Twitter" class="soc-med mx-2" /></a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
