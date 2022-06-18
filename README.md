@@ -3,9 +3,11 @@
 A Coffee E-Commerce website project for KodeGo
 
 A Team Project Collaboration by:
-https://github.com/Ruzell11
-https://github.com/fayeMercado
-https://github.com/felixchristianreyes
+<ul>
+  <li>https://github.com/Ruzell11</li>
+  <li>https://github.com/fayeMercado</li>
+  <li>https://github.com/felixchristianreyes</li>
+</ul>
 
 Website design using HTML, CSS and Bootstrap, Javascript.
 
