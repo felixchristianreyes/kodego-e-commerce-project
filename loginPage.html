@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./login.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/d8b475a339.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <img src="images\background.svg" alt="" id="bg-img" class="img-fluid "/>
+
+
+ <div class="app d-flex flex-column justify-content-center ">
+    <div class="login ">
+        <h1 class="text-center fs-1 fw-bold">Login</h1>
+
+    <div class="container d-flex flex-column  rounded justify-content-center align-items-center " >
+    <div class="top d-flex justify-content-between p-4 w-100">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-google" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+    <p class="divider w-100 text-center" ><span>OR</span></p>
+    <form class="w-100 d-flex flex-column "id='form'>
+        <p class="nameContainer"></p>
+        <p class="nameContainer"></p>
+        <label for="email">Email:</label>
+        <input placeholder="Enter your email" type="email" class="email my-2 input rounded " onkeyup="isEmpty()">
+        <label for="password">Password:</label>
+        <input placeholder="Enter your password" type="password" class="password  input rounded"  onkeyup="isEmpty()">
+        <div class="remember my-2 " >
+            <input type="checkbox" required>
+            <label for="">Remember Me</label>
+        </div>
+        <button class="btn btn-primary" disabled>Login</button>
+        <div class="forgotPass  my-3">
+            <a href="#">Forgot your Password?</a>
+        </div>
+        </div>
+    </div>
+</div>
+    </form>
+
+
+
+
+    
+</body>
+<script src="./login.js"></script>
+</html>
