@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    color: black;
+ height: 100vh;
+    font-size: .8rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+.container{
+    width: 300px !important;
+    background-color: #EDE9E8;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#bg-img{
+    z-index: -50;
+    object-fit: fill;
+    width: 100%;
+    position: fixed;
+}
+.top i{
+    font-size: 20px;
+    cursor: pointer;
+}
+.divider{
+    border-bottom: 1px solid black;
+    line-height: .1rem;
+}
+span{
+    background-color: #EDE9E8;
+}
+.password , .name , .email{
+    height: 40px;
+    padding: 10px;
+
+}
+.nameContainer{
+    color: red !important;
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.redBorder{
+    border: 2px solid red;
+}
