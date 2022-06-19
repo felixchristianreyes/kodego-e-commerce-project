@@ -3,14 +3,80 @@
   --font-secondary: "Dosis", sans-serif;
   --color-black: rgb(0, 0, 0);
   --color-brown: rgb(52, 41, 36);
+  --color-coffee: rgb(238, 219, 195);
   --color-burlywood: rgb(216, 182, 138);
   --color-floralwhite: rgb(255, 250, 240);
   --color-white: rgb(255, 255, 255);
+  --color-yellow: rgb(214, 176, 71);
 }
 
 * {
   font-family: var(--font-secondary);
   font-weight: 500;
+}
+
+/* BOOTSTRAP MODIFICATIONS */
+.breadcrumb-item.active {
+  color: var(--color-burlywood);
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  border: 0;
+  color: inherit;
+}
+.btn-primary:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 0 3px 1px var(--color-brown);
+  color: inherit;
+}
+
+.form-control {
+  border-color: transparent !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+/* REUSABLES */
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#bg-img {
+  object-fit: fill;
+  width: 100%;
+  position: fixed;
+  z-index: -50;
+  opacity: 0.4;
+}
+
+#page {
+  width: 75%;
+  padding: 0px;
+}
+
+.account-button {
+  border: 0;
+  background-color: inherit;
+}
+
+.account-icons {
+  font-size: 1.8rem;
+  background-color: inherit;
+}
+.account-icons:hover {
+  color: var(--color-burlywood) !important;
+}
+
+.anchor-top {
+  display: block;
+  height: 182px; /*same height as header*/
+  margin-top: -182px; /*same height as header*/
+  visibility: hidden;
 }
 
 .btn-brown {
@@ -25,56 +91,22 @@
   color: var(--color-white);
 }
 
-.account-icons {
-  font-size: 1.8rem;
-  background-color: inherit;
-}
-.account-icons:hover {
-  color: var(--color-burlywood) !important;
+.card:hover {
+  box-shadow: 0 0 5px 1px var(--color-brown);
 }
 
-.account-button {
-  border: 0;
-  background-color: inherit;
+.card-title-container h5 {
+  min-height: 55px;
 }
 
-/* HOMEPAGE ADDITIONAL*/
-.category-card {
-  height: 300px;
-  background-color: rgba(222, 184, 135, 0.5);
+.category-item {
+  padding: 5px;
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
-
-.category-card-img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.btn-white {
-  background-color: floralwhite;
-}
-
-.btn-white:hover {
-  box-shadow: 0 0 3px 1px #342924;
-}
-
-/* TO BE EDITED . . . . .  */
-#page {
-  width: 75%;
-  padding: 0px;
-}
-
-#main_content {
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: inherit;
+.category-item:hover {
+  box-shadow: 0 0 3px 1px var(--color-brown);
 }
 
 .font-20 {
@@ -85,120 +117,116 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.footer {
+  border-top: 2px dashed var(--color-brown);
+}
+
+.footer .links a,
+.footer .links span {
+  font-size: 1.25rem;
+  font-family: var(--font-primary);
+}
+
+.footer .links a:hover {
+  color: var(--color-burlywood);
+}
+
+.nav-category-container {
+  height: 70%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.nav-category {
+  height: 100%;
+}
+
 .poppins {
   font-family: var(--font-primary);
 }
 
+.searchbar {
+  border: 1px solid var(--color-burlywood);
+  border-radius: 5px;
+}
+
+.social-media img {
+  width: 30px;
+}
+
+.tags {
+  height: 50px;
+}
+
+.tags .anniv-special,
+.tags .best-seller,
+.tags .new-arrival {
+  margin: 0 2px 0 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--color-white);
+}
+
+.tags .anniv-special {
+  background-color: var(--color-brown);
+}
+
+.tags .best-seller {
+  background-color: var(--color-yellow);
+}
+
+.tags .new-arrival {
+  background-color: var(--color-burlywood);
+}
+
 .text-burly {
-  color: rgb(222, 184, 135);
+  color: var(--color-burlywood);
 }
 
 .text-black {
-  color: rgb(0, 0, 0);
+  color: var(--color-black);
 }
 
 .text-brown {
-  color: rgb(52, 41, 36);
-}
-
-.anchor-top {
-  display: block;
-  height: 182px; /*same height as header*/
-  margin-top: -182px; /*same height as header*/
-  visibility: hidden;
-}
-
-.anchor-bottom {
-  display: block;
-  height: 38px;
-  margin-bottom: -38px;
-  visibility: hidden;
-}
-
-#bg-img {
-  object-fit: fill;
-  width: 100%;
-  position: fixed;
-  z-index: -50;
-  opacity: 0.4;
+  color: var(--color-brown);
 }
 
 .top-nav {
   height: 125px;
-  background: rgb(255, 250, 240);
-  border-bottom: 2px dashed #342924;
+  background: var(--color-floralwhite);
+  border-bottom: 2px dashed var(--color-brown);
 }
 
-.top-nav-prod {
-  width: 75vw;
-  height: 125px;
-  background: floralwhite;
-  border-bottom: 2px dashed #342924;
+/* REUSABLES - END */
+
+/* HOMEPAGE*/
+.category-card {
+  height: 300px;
+  background-color: var(--color-coffee);
 }
 
-.logo {
+.category-card-img {
   height: 100%;
-  justify-self: center;
-  align-self: center;
+  object-fit: cover;
 }
 
-.logo-prod {
-  height: 100%;
-  justify-self: center;
-  align-self: center;
+/* CATEGORIES */
+#category .category-item:hover {
+  background-color: floralwhite;
 }
+
+/* TO BE EDITED . . . . . STILL CHECKING ON OTHER PAGES*/
 
 .opacity-p8 {
   opacity: 0.8;
 }
 
-.soc-med {
-  width: 30px;
-}
-
-#category {
-  padding: 0 5% 0 5%;
-}
-
-/* .category-item {
-  border-radius: 50%;
-  border: 1px solid #342924;
-} */
-
-.category-item {
-  padding: 5px;
-  height: 70%;
-  border-radius: 50%;
-  background-color: white;
-}
-
-/* .category-item:hover {
-  background-color: floralwhite;
-} */
-
-.category-item:hover {
-  box-shadow: 0 0 3px 1px #342924;
-}
-
 .active {
   font-weight: bolder !important;
-}
-
-.searchbar {
-  border: 1px solid burlywood;
-  border-radius: 5px;
-}
-
-.search-input {
-  border-color: transparent !important;
-}
-
-.search-input:focus {
-  box-shadow: none !important;
-}
-
-#ads-carousel {
-  box-shadow: 0 0 8px 3px floralwhite;
 }
 
 .item-photo {
@@ -248,22 +276,6 @@ a:hover {
   margin-bottom: 2px;
 }
 
-.card:hover {
-  box-shadow: 0 0 5px 1px #342924;
-}
-
-.card-title-container {
-  min-height: 80px;
-}
-
-.card-title {
-  font-weight: bold;
-}
-
-h5.card-title {
-  min-height: 55px;
-}
-
 .icon-prop {
   color: #342924;
   opacity: 0.7;
@@ -307,14 +319,4 @@ h5.card-title {
 .discount {
   text-decoration: line-through;
   opacity: 50;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 75%;
-  height: 40px;
-  background-color: floralwhite;
-  border-top: 2px dashed #342924;
-  z-index: 10;
 }
