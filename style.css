@@ -1,8 +1,63 @@
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Dosis", sans-serif;
+  --color-black: rgb(0, 0, 0);
+  --color-brown: rgb(52, 41, 36);
+  --color-burlywood: rgb(216, 182, 138);
+  --color-floralwhite: rgb(255, 250, 240);
+  --color-white: rgb(255, 255, 255);
+}
+
 * {
-  font-family: "Dosis", sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 500;
 }
 
+.btn-brown {
+  /* previously '.custom-button' */
+  border: 1px solid var(--color-brown);
+  background-color: var(--color-white);
+  border-radius: 3px;
+}
+.btn-brown:hover {
+  background-color: var(--color-brown);
+  border: 1px solid var(--color-brown);
+  color: var(--color-white);
+}
+
+.account-icons {
+  font-size: 1.8rem;
+  background-color: inherit;
+}
+.account-icons:hover {
+  color: var(--color-burlywood) !important;
+}
+
+.account-button {
+  border: 0;
+  background-color: inherit;
+}
+
+/* HOMEPAGE ADDITIONAL*/
+.category-card {
+  height: 300px;
+  background-color: rgba(222, 184, 135, 0.5);
+}
+
+.category-card-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-white {
+  background-color: floralwhite;
+}
+
+.btn-white:hover {
+  box-shadow: 0 0 3px 1px #342924;
+}
+
+/* TO BE EDITED . . . . .  */
 #page {
   width: 75%;
   padding: 0px;
@@ -31,19 +86,19 @@ a:hover {
 }
 
 .poppins {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .text-burly {
-  color: burlywood;
+  color: rgb(222, 184, 135);
 }
 
 .text-black {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .text-brown {
-  color: #342924;
+  color: rgb(52, 41, 36);
 }
 
 .anchor-top {
@@ -69,8 +124,8 @@ a:hover {
 }
 
 .top-nav {
-  height: 200px;
-  background: floralwhite;
+  height: 125px;
+  background: rgb(255, 250, 240);
   border-bottom: 2px dashed #342924;
 }
 
@@ -101,39 +156,8 @@ a:hover {
   width: 30px;
 }
 
-.custom-button {
-  min-width: 75px;
-  height: fit-content;
-  border: 1px solid #342924;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.custom-button:hover {
-  background-color: burlywood;
-  border: 1px solid burlywood;
-}
-
-.bag-button {
-  border: 0;
-  background-color: inherit;
-}
-
-.bag {
-  font-size: 1.8rem;
-  background-color: inherit;
-}
-
-.bag:hover {
-  color: burlywood !important;
-}
-
 #category {
   padding: 0 5% 0 5%;
-}
-
-#ads-carousel {
-  box-shadow: 0 0 8px 3px floralwhite;
 }
 
 /* .category-item {
