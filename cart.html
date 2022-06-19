@@ -48,6 +48,19 @@
         .custom-border-bottom-black {
             border-bottom: 2px dashed #342924;
         }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1055;
+            display: none;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            outline: 0;
+        }
     </style>
 
 </head>
@@ -60,11 +73,16 @@
 
 
         <!-- LOGO -->
-        <div class="container d-flex align-center justify-content-center p-3">
-            <img src="images\logo-dark.svg" alt="" class="w-25">
+        <div class="top-nav container d-flex justify-content-between px-5 py-3 w-75">
+            <!-- LOGO -->
+            <div class="d-flex align-center justify-content-center">
+                <img src="images\logo-dark.svg" alt="" class="logo">
+            </div>
+
+            
         </div>
 
-        <div class="container w-75 p-0" style="border-top: 2px dashed #342924;">
+        <div class="container w-75 p-0">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
                     <div>
@@ -72,14 +90,13 @@
                             <div class="row g-0">
                                 <div class="col-lg-8 bg-floralwhite">
                                     <div class="p-5">
-                                        <div class="d-flex justify-content-between align-items-center mb-5">
-                                            <h1 class="fw-bold mb-0 text-black">Your Bag</h1>
-                                            <h6 class="mb-0 text-uppercase text-muted">5 items</h6>
+                                        <div>
+                                            <h1 class="fw-bold mb-0">Your Bag</h1>
                                         </div>
 
-                                        <div class="custom-border-top-black"></div>
+                                        <hr class="mt-5">
 
-                                        <div class="pt-5 container-fluid d-flex justify-content-center">
+                                        <div class=" container-fluid d-flex justify-content-center">
                                             <h3 class="fw-bold">Drinks</h3>
                                         </div>
 
@@ -92,7 +109,7 @@
                                                     <h5 class="fw-bolder">Iced Latte</h5>
                                                 </div>
 
-                                                <div class="py-1 col-3 text-center pt-3">
+                                                <div class="col-3 text-center pt-3">
                                                     <div class="row">
                                                         <h6 class="text-muted col-4">Size: </h6>
                                                         <select class="select col-8" id="">
@@ -269,14 +286,14 @@
                                             </div>
                                         </div>
 
-                                        <div class="custom-border-top-black mt-5"></div>
+                                        <hr class="mt-5">
 
                                         <div class="pt-5 container-fluid">
                                             <h3 class="d-flex justify-content-center fw-bold">Pastries</h3>
                                             <h4 class="d-flex justify-content-center">No pastries added to bag</h4>
                                         </div>
 
-                                        <div class="custom-border-top-black mt-5"></div>
+                                        <hr class="mt-5">
 
 
                                         <div class="pt-5">
@@ -295,7 +312,7 @@
 
                                         <div class="d-flex justify-content-between mb-4">
                                             <h5 class="text-uppercase">items 5</h5>
-                                            <h5>₱ 350.00</h5>
+                                            <h5>₱ 375.00</h5>
                                         </div>
 
                                         <hr class="my-4">
@@ -323,9 +340,9 @@
 
                                         <div class="d-flex justify-content-between mb-5">
                                             <h5 class="text-uppercase">Total price</h5>
-                                            <h5>₱ 400.00</h5>
+                                            <h5>₱ 425.00</h5>
                                         </div>
-                                        <button type="button" class="btn btn-dark btn-block btn-lg">Checkout</button>
+                                        <button type="button" class="btn btn-dark btn-block btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>
 
                                     </div>
                                 </div>
@@ -335,8 +352,62 @@
                 </div>
             </div>
         </div>
-
     </main>
+
+    
+
+    <footer class="container text-center py-5 pb-3 pt-3 w-75 custom-border-top-black">
+
+        <!-- Footer links -->
+        <div class="font-20">
+            <a href="" class="poppins">Our Company</a>
+            <span class="poppins mx-3 text-burly">-</span>
+            <a href="" class="poppins">Contact Us</a>
+            <span class="poppins mx-3 text-burly">-</span>
+            <a href="" class="poppins">Buy Gift Cards</a>
+            <span class="poppins mx-3 text-burly">-</span>
+            <a href="" class="poppins">FAQs</a>
+        </div>
+        <!-- Like us on our social media -->
+        <div class="container d-flex flex-column mt-3">
+            <div class="font-20">Follow us for updates!</div>
+            <div>
+                <a href="">
+                    <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook"
+                        class="soc-med mx-2">
+                </a>
+                <a href="">
+                    <img src="https://img.icons8.com/ios/250/342924/instagram-new.png" alt="Instagram"
+                        class="soc-med mx-2"></a>
+                <a href="">
+                    <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="soc-med mx-2"></a>
+            </div>
+        </div>
+        <div class="pt-2">© 2022 COFFEE TO GO</div>
+
+        
+
+    </footer>
+
+    <!--Modal-->
+    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="display-5">You have successfully purchased a min. of <span>₱ 350.00</span></h1>
+                </div>
+                <div class="modal-body text-center">
+                    <p>1 Ticket has been added to your account</p>
+                    <p>To use your available ticket, please navigate to <a class="btn btn-white bg-floralwhite">Account > Rewards</a></p>
+                </div>
+                <div class="modal-footer d-flex">
+                    <button type="button" class="btn btn-white justify-content-base">Print Receipt</button>
+                    <button type="button" class="btn btn-dark">Back to Shop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
