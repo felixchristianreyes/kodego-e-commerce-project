@@ -23,6 +23,7 @@
     rel="stylesheet" />
   <!-- External CSS-->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./countDown.css">
 
   <title>Coffee To Go | Home</title>
   <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
@@ -63,10 +64,10 @@
         <!-- SIGN IN-UP -->
         <div class="opacity-p8 container col-3 d-flex align-self-center justify-content-center">
           <button type="button" class="custom-button mx-1">
-            <a href="">SIGN IN</a>
+            <a href="loginPage.html">SIGN IN</a>
           </button>
           <button type="button" class="custom-button mx-1">
-            <a href="">SIGN UP</a>
+            <a href="loginPage.html">SIGN UP</a>
           </button>
           <button type="button" class="bag-button position-relative text-center mx-2">
             <i class="fa-solid fa-bag-shopping bag text-brown"></i>
@@ -109,6 +110,49 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    </div>
+    <!--countDown-->
+    <div class="container my-2  d-flex gap-4   gap-3 align-center justify-content-center ">
+      <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
+        <div class="hrs fw-bold fs-1">HOURS </div>
+        <div class="segment d-flex gap-3  ">
+          <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
+            <div class="top   ">8</div>
+              <div class="bottom align-items-end d-flex  " >8</div>
+          </div>
+              <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
+                <div class="top   ">8</div>
+                  <div class="bottom align-items-end d-flex  " >8</div>
+              </div>
+          </div>
+        </div>
+       
+        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+          <div class="hrs fw-bold fs-1">MINUTES</div>
+          <div class="segment d-flex gap-3  ">
+        <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
+          <div class="top">8</div>
+            <div class="bottom align-items-end d-flex  " >8</div>
+        </div>
+        <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
+          <div class="top   ">8</div>
+            <div class="bottom align-items-end d-flex  " >8</div>
+        </div>
+        </div>
+        </div>
+        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+          <div class="hrs fw-bold fs-1">SECONDS</div>
+          <div class="segment d-flex gap-3  ">
+        <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
+          <div class="top   ">8</div>
+            <div class="bottom align-items-end d-flex  " >8</div>
+        </div>
+        <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
+          <div class="top   ">8</div>
+            <div class="bottom align-items-end d-flex  " >8</div>
+        </div>
+      </div>
+    </div>
     </div>
 
     <div id="main_content" class="container d-flex flex-column vh-100 p-0">
@@ -162,5 +206,6 @@
     </div>
   </div>
 </body>
+<script src="./countDown.js"></script>
 
 </html>

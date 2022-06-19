@@ -16,12 +16,12 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #EDE9E8;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-#bg-img{
+/* #bg-img{
     z-index: -50;
     object-fit: fill;
     width: 100%;
     position: fixed;
-}
+} */
 .top i{
     font-size: 20px;
     cursor: pointer;
@@ -46,4 +46,10 @@ span{
 
 .redBorder{
     border: 2px solid red;
+}
+.logo{
+    cursor: pointer;
+}
+.app h1{
+    font-family: 'Courier New', Courier, monospace;
 }
