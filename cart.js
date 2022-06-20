@@ -3,37 +3,37 @@ const heartButton = document.querySelectorAll('.fa-heart');
 let products = [
     {
         name:"Iced Latte",
-        tag:"Iced Latte",
+        tag:"latte",
         price:125,
         inCart:0
     },
     {
         name:"Iced Mocha",
-        tag:"Iced Mocha",
+        tag:"mocha",
         price:150,
         inCart:0 
     },
     {
         name:"Iced Americano",
-        tag:"Iced Americano",
+        tag:"americano",
         price:100,
         inCart:0
     },
     {
         name:"Iced Orange Espresso",
-        tag:"Iced Orange Espresso",
+        tag:"orange-espresso",
         price:150,
         inCart:0
     },
     {
         name:"Iced Cappuccino",
-        tag:"Iced Cappuccino",
+        tag:"cappuccino",
         price:150,
         inCart:0
     },
     {
         name:"Iced Macha Green Tea",
-        tag:"Iced Macha Green Tea",
+        tag:"macha",
         price:200,
         inCart:0
     }
@@ -105,7 +105,82 @@ const totalCost = (products) => {
 const displayCart = () => {
     let cartItems = localStorage.getItem('productIncart')
     cartItems = JSON.parse(cartItems)
+    let productNumbers = localStorage.getItem('cartNumbers')
+    const productContainer = document.querySelector('.productContainer');
+    let cartCost = localStorage.getItem('totalCost')
 
-    console.log(cartItems)
+   if(cartItems && productContainer){
+    productContainer.innerHTML = '';
+    Object.values(cartItems).map(item => {
+        productContainer.innerHTML += `
+        <div class='products  row card bg-floralwhite my-2' >
+        <div class="d-flex justify-content-between align-items-center">
+        <div
+            class="col-3 p-0 d-flex flex-column align-items-center justify-content-end">
+            <img src="./images/${item.tag}.png" class="img-fluid">
+            <h5 class="fw-bolder">Iced Latte</h5>
+        </div>
+
+        <div class="col-3 text-center pt-3">
+            <div class="row">
+                <h6 class="text-muted col-4">Size: </h6>
+                <select class="select col-8" id="">
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                </select>
+            </div>
+            <div class="row">
+                <h6 class="text-muted col-4">Milk: </h6>
+                <select class="select col-8" id="">
+                    <option value="1">Whole Milk</option>
+                    <option value="2">Nonfat Milk</option>
+                    <option value="3">Soy Milk</option>
+                </select>
+            </div>
+            <div class="row">
+                <h6 class="text-muted col-4">Sugar: </h6>
+                <select class="select col-8">
+                    <option value="1">0%</option>
+                    <option value="2">25%</option>
+                    <option value="3">50%</option>
+                    <option value="4">75%</option>
+                    <option value="5">100%</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-2 d-flex col-1 offset-1">
+            <button class="btn px-2"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                <i class="fas fa-minus"></i>
+            </button>
+            <input id="form1" min="1" name="quantity" value=${item.inCart} type="number"
+                class="form-control form-control-sm" />
+            <button class="btn px-2"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="col-1 offset-1">
+            <h6 class="mb-0">₱ ${item.inCart * item.price}</h6>
+        </div>
+
+        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+        </div>
+
+    </div>
+</div>
+</div>   
+        `
+        document.querySelector('.totalcost').innerHTML = "₱" +cartCost
+        document.querySelector('.totalItems').innerHTML = productNumbers
+    })
+
+
+   }
 }
 onLoading()
+displayCart()
