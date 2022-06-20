@@ -1,6 +1,6 @@
 var bridge = document.getElementById("bridge"),
   bridgeCanvas = bridge.getContext("2d"),
-  brushRadius = (bridge.width / 100) * 8,
+  brushRadius = bridge.height / 8,
   img = new Image();
 
 img.onload = function () {
@@ -8,12 +8,7 @@ img.onload = function () {
 };
 img.loc = "./images/";
 img.filename = "promo-ticket.gif";
-if (window.devicePixelRatio >= 2) {
-  var nameParts = img.filename.split(".");
-  img.src = img.loc + nameParts[0] + "-2x" + "." + nameParts[1];
-} else {
-  img.src = img.loc + img.filename;
-}
+img.src = img.loc + img.filename;
 
 function detectLeftButton(event) {
   if ("buttons" in event) {
@@ -41,7 +36,7 @@ function getBrushPos(xRef, yRef) {
 
 function drawDot(mouseX, mouseY) {
   bridgeCanvas.beginPath();
-  bridgeCanvas.arc(mouseX, mouseY, brushRadius, 0, 2 * Math.PI, true);
+  bridgeCanvas.arc(mouseX, mouseY, brushRadius, 0, Math.PI * 2, true);
   bridgeCanvas.fillStyle = "#000";
   bridgeCanvas.globalCompositeOperation = "destination-out";
   bridgeCanvas.fill();

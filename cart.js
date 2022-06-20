@@ -1,124 +1,120 @@
-const heartButton = document.querySelectorAll('.fa-heart');
+const heartButton = document.querySelectorAll(".fa-cart-arrow-down");
 
 let products = [
-    {
-        name:"Iced Latte",
-        tag:"latte",
-        price:125,
-        inCart:0
-    },
-    {
-        name:"Iced Mocha",
-        tag:"mocha",
-        price:150,
-        inCart:0 
-    },
-    {
-        name:"Iced Americano",
-        tag:"americano",
-        price:100,
-        inCart:0
-    },
-    {
-        name:"Iced Orange Espresso",
-        tag:"orange-espresso",
-        price:150,
-        inCart:0
-    },
-    {
-        name:"Iced Cappuccino",
-        tag:"cappuccino",
-        price:150,
-        inCart:0
-    },
-    {
-        name:"Iced Macha Green Tea",
-        tag:"macha",
-        price:200,
-        inCart:0
-    }
-]
+  {
+    name: "Iced Latte",
+    tag: "latte",
+    price: 125,
+    inCart: 0,
+  },
+  {
+    name: "Iced Mocha",
+    tag: "mocha",
+    price: 150,
+    inCart: 0,
+  },
+  {
+    name: "Iced Americano",
+    tag: "americano",
+    price: 100,
+    inCart: 0,
+  },
+  {
+    name: "Iced Orange Espresso",
+    tag: "orange-espresso",
+    price: 150,
+    inCart: 0,
+  },
+  {
+    name: "Iced Cappuccino",
+    tag: "cappuccino",
+    price: 150,
+    inCart: 0,
+  },
+  {
+    name: "Iced Macha Green Tea",
+    tag: "macha",
+    price: 200,
+    inCart: 0,
+  },
+];
 
-for(let i = 0; i < heartButton.length; i++){
-    heartButton[i].addEventListener('click' , () =>{
-        cartNumbers(products[i])
-        totalCost(products[i])
-    })
+for (let i = 0; i < heartButton.length; i++) {
+  heartButton[i].addEventListener("click", () => {
+    cartNumbers(products[i]);
+    totalCost(products[i]);
+  });
 }
 
 const onLoading = () => {
-    let productNumbers = localStorage.getItem('cartNumbers')
+  let productNumbers = localStorage.getItem("cartNumbers");
 
-    if(productNumbers){
-        document.querySelector('.bagSpan').textContent = productNumbers
-    }
-}
+  if (productNumbers) {
+    document.querySelector(".bagSpan").textContent = productNumbers;
+  }
+};
 
-const cartNumbers = (products) =>{
-    let productNumbers = localStorage.getItem('cartNumbers')
-    productNumbers = parseInt(productNumbers)
-    if(productNumbers){
-        localStorage.setItem('cartNumbers' ,productNumbers + 1)
-        document.querySelector('.bagSpan').textContent = productNumbers + 1
-    }else{
-        localStorage.setItem('cartNumbers' , 1)
-        document.querySelector('.bagSpan').textContent = 1
-    }
-   setItems(products)
-}
-const setItems = (products) =>{
-    let cartItems = localStorage.getItem("productIncart")
-    cartItems = JSON.parse(cartItems)
+const cartNumbers = (products) => {
+  let productNumbers = localStorage.getItem("cartNumbers");
+  productNumbers = parseInt(productNumbers);
+  if (productNumbers) {
+    localStorage.setItem("cartNumbers", productNumbers + 1);
+    document.querySelector(".bagSpan").textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem("cartNumbers", 1);
+    document.querySelector(".bagSpan").textContent = 1;
+  }
+  setItems(products);
+};
+const setItems = (products) => {
+  let cartItems = localStorage.getItem("productIncart");
+  cartItems = JSON.parse(cartItems);
 
-    if(cartItems != null){   
-        if(cartItems[products.tag] == undefined){
-            cartItems ={
-               ...cartItems,
-               [products.tag]:products 
-            }
-        }
-        cartItems[products.tag].inCart += 1
-    }else{
-        products.inCart = 1
-        cartItems = {
-            [products.tag]:products
-        }
-    
+  if (cartItems != null) {
+    if (cartItems[products.tag] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [products.tag]: products,
+      };
     }
-  
-   
-    localStorage.setItem("productIncart" , JSON.stringify
-    (cartItems))
-}
+    cartItems[products.tag].inCart += 1;
+  } else {
+    products.inCart = 1;
+    cartItems = {
+      [products.tag]: products,
+    };
+  }
+
+  localStorage.setItem("productIncart", JSON.stringify(cartItems));
+};
 const totalCost = (products) => {
-   
-    let cartCost = localStorage.getItem('totalCost')
-  
-    if(cartCost != null){
-        cartCost = parseInt(cartCost)
-        localStorage.setItem('totalCost' , cartCost + products.price)
-    }else{
-        localStorage.setItem('totalCost', products.price)
-    }
-}
+  let cartCost = localStorage.getItem("totalCost");
+
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost", cartCost + products.price);
+  } else {
+    localStorage.setItem("totalCost", products.price);
+  }
+};
 
 const displayCart = () => {
-    let cartItems = localStorage.getItem('productIncart')
-    cartItems = JSON.parse(cartItems)
-    let productNumbers = localStorage.getItem('cartNumbers')
-    const productContainer = document.querySelector('.productContainer');
-    let cartCost = localStorage.getItem('totalCost')
+  let cartItems = localStorage.getItem("productIncart");
+  cartItems = JSON.parse(cartItems);
+  let productNumbers = localStorage.getItem("cartNumbers");
+  const productContainer = document.querySelector(".productContainer");
+  let cartCost = localStorage.getItem("totalCost");
 
-   if(cartItems && productContainer){
-    productContainer.innerHTML = '';
-    Object.values(cartItems).map(item => {
-        productContainer.innerHTML += `
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      productContainer.innerHTML += `
         <div class='products  row card bg-floralwhite my-2' >
         <div class="d-flex justify-content-between align-items-center">
         <div
             class="col-3 p-0 d-flex flex-column align-items-center justify-content-end">
             <img src="./images/${item.tag}.png" class="img-fluid">
-            <h5 class="fw-bolder">Iced Latte</h5>
+            <h5 class="fw-bolder">${item.name}</h5>
         </div>
 
         <div class="col-3 text-center pt-3">
@@ -155,7 +151,9 @@ const displayCart = () => {
                 onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                 <i class="fas fa-minus"></i>
             </button>
-            <input id="form1" min="1" name="quantity" value=${item.inCart} type="number"
+            <input id="form1" min="1" name="quantity" value=${
+              item.inCart
+            } type="number"
                 class="form-control form-control-sm" />
             <button class="btn px-2"
                 onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -174,13 +172,11 @@ const displayCart = () => {
     </div>
 </div>
 </div>   
-        `
-        document.querySelector('.totalcost').innerHTML = "₱" +cartCost
-        document.querySelector('.totalItems').innerHTML = productNumbers
-    })
-
-
-   }
-}
-onLoading()
-displayCart()
+        `;
+      document.querySelector(".totalcost").innerHTML = "₱" + cartCost;
+      document.querySelector(".totalItems").innerHTML = productNumbers;
+    });
+  }
+};
+onLoading();
+displayCart();
