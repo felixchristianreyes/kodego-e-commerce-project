@@ -24,7 +24,6 @@
     rel="stylesheet" />
   <!-- EXTERNAL CSS-->
   <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./countDown.css">
 
   <title>Coffee To Go | Home</title>
   <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
@@ -87,6 +86,55 @@
           <div class="carousel-item active" data-bs-interval="5000">
             <a href="promopage.html">
               <img src="images\ads1.gif" class="d-block w-100" alt="..." /></a>
+
+            <!--COUNTDOWN-->
+            <div id="countdown-homepage" class="container my-2 d-flex gap-4 gap-3 position-absolute">
+              <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
+                <div class="hrs fw-bold fs-1">HOURS </div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-end">
+                <h1 class="display-1">:</h1>
+              </div>
+              <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                <div class="hrs fw-bold fs-1">MINUTES</div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-end">
+                <h1 class="display-1">:</h1>
+              </div>
+              <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                <div class="hrs fw-bold fs-1">SECONDS</div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <a href="promopage.html#new">
@@ -104,49 +152,6 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
-    <!--countDown-->
-    <div class="container my-2  d-flex gap-4   gap-3 align-center justify-content-center ">
-      <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
-        <div class="hrs fw-bold fs-1">HOURS </div>
-        <div class="segment d-flex gap-3  ">
-          <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
-            <div class="top   ">8</div>
-              <div class="bottom align-items-end d-flex  " >8</div>
-          </div>
-              <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
-                <div class="top   ">8</div>
-                  <div class="bottom align-items-end d-flex  " >8</div>
-              </div>
-          </div>
-        </div>
-       
-        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
-          <div class="hrs fw-bold fs-1">MINUTES</div>
-          <div class="segment d-flex gap-3  ">
-        <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
-          <div class="top">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        </div>
-        </div>
-        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
-          <div class="hrs fw-bold fs-1">SECONDS</div>
-          <div class="segment d-flex gap-3  ">
-        <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-      </div>
-    </div>
     </div>
 
     <!-- CATEGORY CARDS -->
@@ -268,7 +273,9 @@
       <div>&copy; 2022 COFFEE TO GO</div>
     </div>
   </div>
+
+  <script src="./countDown.js"></script>
 </body>
-<script src="./countDown.js"></script>
+
 
 </html>
