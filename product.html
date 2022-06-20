@@ -80,7 +80,7 @@
         <div class="d-flex align-self-center justify-content-end">
           <!-- Signed-in, remove d-none to show -->
           <div class="d-flex">
-            <h5 class="align-self-center m-0">Welcome, <b>Customer!</b></h5>
+            <h5 class="align-self-center m-0">Welcome, <span id="userName"></span></h5>
             <button type="button" class="account-button position-relative text-center mx-2">
               <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
             </button>
@@ -737,6 +737,10 @@
 </body>
 
 <script src="./cart.js"></script>
+<script src="./login.js"></script>
+<script>
+   document.getElementById('userName').innerHTML =  localStorage.getItem('textvalue')
+</script>
 </html>
 
 

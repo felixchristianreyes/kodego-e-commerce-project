@@ -55,8 +55,8 @@
       <!-- ACCOUNT -->
       <div class="d-flex align-self-center justify-content-end">
         <!-- use if signed-in, remove d-none to show -->
-        <div class="d-flex d-none">
-          <h5 class="align-self-center m-0">Welcome, <b>Customer!</b></h5>
+        <div class="d-flex ">
+          <h5 class="align-self-center m-0">Welcome, <span id="userName"></span></h5>
           <button type="button" class="account-button position-relative text-center mx-2">
             <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
           </button>
@@ -72,7 +72,7 @@
         </div>
         <button type="button" class="account-button position-relative text-center mx-2">
 
-          <i class="fa-solid fa-bag-shopping account-icons p-0"></i>
+         <a href="cart.html"> <i class="fa-solid fa-bag-shopping account-icons p-0"></i></a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
             0
           </span>
@@ -156,34 +156,7 @@
     </div>
 
        
-        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
-          <div class="hrs fw-bold fs-1">MINUTES</div>
-          <div class="segment d-flex gap-3  ">
-        <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
-          <div class="top">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        </div>
-        </div>
-        <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
-          <div class="hrs fw-bold fs-1">SECONDS</div>
-          <div class="segment d-flex gap-3  ">
-        <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-        <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
-          <div class="top   ">8</div>
-            <div class="bottom align-items-end d-flex  " >8</div>
-        </div>
-      </div>
-    </div>
-    </div>
-
+      
 
     <!-- CATEGORY CARDS -->
     <!-- 1-Category card for drinks -->
@@ -309,6 +282,11 @@
 
 <script src="./countDown.js"></script>
 <script src="./cart.js"></script>
+
+<script>
+  document.getElementById('userName').innerHTML =  localStorage.getItem('textvalue')
+
+  </script>
 
 
 

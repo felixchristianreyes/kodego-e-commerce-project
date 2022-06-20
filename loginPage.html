@@ -36,7 +36,7 @@
         <h1 class="text-center fs-1 fw-bold">Login</h1>
 
     <div class="container d-flex flex-column  rounded justify-content-center align-items-center " >
-    <div class="top d-flex justify-content-between p-3 w-100">
+    <div class="tops d-flex justify-content-between p-3 w-100 h-100">
         <i class="fa fa-facebook" aria-hidden="true"></i>
         <i class="fa fa-google" aria-hidden="true"></i>
         <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -44,7 +44,10 @@
     </div>
     <p class="divider w-100 text-center" ><span>OR</span></p>
     <form class="w-100 d-flex flex-column "id='form'>
+        <label for="name">Name:</label>
+        <input placeholder="Enter your name" type="text" class="name my-2 input rounded " id="name" >
         <p class="nameContainer"></p>
+        
         <label for="email">Email:</label>
         <input placeholder="Enter your email" type="email" class="email my-2 input rounded " onkeyup="isEmpty()">
         <label for="password">Password:</label>
