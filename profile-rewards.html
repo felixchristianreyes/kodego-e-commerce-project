@@ -65,6 +65,37 @@
         .c-height {
             height: 760px;
         }
+
+        body {
+            margin: 0;
+        }
+
+        #bridgeContainer span.hed {
+            z-index: 999;
+            color: #ffffff;
+        }
+
+        #bridge {
+
+            display: block;
+            margin: 0 auto;
+            background-image: url('');
+            background-size: cover;
+            width: 100%;
+            max-width: 750px;
+            height: 250px;
+            cursor: crosshair;
+
+        }
+
+        #bridgeContainer {
+            text-align: center;
+            font-family: Avenir, sans-serif;
+        }
+
+        #bridgeContainer figcaption {
+            margin-top: 2rem;
+        }
     </style>
 
 </head>
@@ -133,23 +164,25 @@
                             <div class="card-header">
                                 <h1>Rewards</h1>
                             </div>
+                            
+                            <!--Voucher-->
                             <div class="card-body">
                                 <div class="row">
                                     <div>
-
                                         <h2>Lottery Ticket</h2>
                                         <ul>
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <li>Voucher 1</li>
+                                                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">Voucher 1
+                                                    </li>
                                                 </div>
                                             </div>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
 
+                            <!--Voucher-->
                             <div class="card-body">
                                 <div class="row">
                                     <div>
@@ -162,16 +195,12 @@
                                                 </div>
                                             </div>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-
-
-
                 </div>
         </section>
     </main>
@@ -207,8 +236,32 @@
 
     </footer>
 
+    <!--Modal-->
+    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg rounded">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h2>Scratch, scratch, scratch</h2>
+                </div>
 
+                <div class="modal-body text-center">
+                    <figure id="bridgeContainer rounded">
+                        <canvas id="bridge" width="750" height="465"></canvas>
+                        <h4 class="pt-4">Get 3 consecutive beans to earn a random merch or voucher!</h4>
+                    </figure>
+                </div>
 
+                <div class="modal-footer ">
+
+                    <a href="profile-rewards.html"><button class="btn btn-dark">Close</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="scratch.js"></script>
 </body>
 
 </html>
