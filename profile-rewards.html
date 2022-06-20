@@ -96,6 +96,16 @@
         #bridgeContainer figcaption {
             margin-top: 2rem;
         }
+
+        #scratch-beating {
+        height: 100%;
+        animation: 2s ease 0s infinite beat;
+        }
+
+        @keyframes beat {
+        0%, 50%, 100% { transform: scale(1, 1); }
+        30%, 80% { transform: scale(0.92, 0.95); }
+        }
     </style>
 
 </head>
@@ -164,7 +174,7 @@
                             <div class="card-header">
                                 <h1>Rewards</h1>
                             </div>
-                            
+
                             <!--Voucher-->
                             <div class="card-body">
                                 <div class="row">
@@ -242,7 +252,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg rounded">
             <div class="modal-content">
                 <div class="modal-header d-flex justify-content-center">
-                    <h2>Scratch, scratch, scratch</h2>
+                    <h2 id="scratch-beating">Scratch, scratch, scratch</h2>
                 </div>
 
                 <div class="modal-body text-center">
