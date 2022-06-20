@@ -24,7 +24,6 @@
     rel="stylesheet" />
   <!-- EXTERNAL CSS-->
   <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./countDown.css">
 
   <title>Coffee To Go | Home</title>
   <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
@@ -34,34 +33,45 @@
   <!-- BACKGROUND -->
   <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
 
-  <div id="page" class="container d-flex flex-column">
+  <div id="page" class="container d-flex flex-column w-75">
     <!-- TOP NAV -->
-    <div class="top-nav sticky-top container d-flex justify-content-between px-5 py-3">
+    <div class="top-nav sticky-top d-flex justify-content-between px-5 py-3">
       <!-- LOGO -->
       <div class="d-flex align-center justify-content-center">
-        <img src="images\logo-dark.svg" alt="" class="logo" />
+        <img src="images\logo-dark.svg" alt="" class="h-100" />
+      </div>
+
+      <!-- ALL PRODUCTS -->
+      <div class="nav-category-container d-flex justify-content-center text-center  w-50">
+        <div class="nav-category">
+          <a href="product.html">
+            <img src="images\cat-all.svg" alt="" class="category-item mb-2" />
+          </a>
+          <p class="font-14">ALL PRODUCTS</p>
+        </div>
       </div>
 
 
       <!-- ACCOUNT -->
       <div class="d-flex align-self-center justify-content-end">
-        <!-- Signed-in, remove d-none to show -->
+        <!-- use if signed-in, remove d-none to show -->
         <div class="d-flex d-none">
           <h5 class="align-self-center m-0">Welcome, <b>Customer!</b></h5>
           <button type="button" class="account-button position-relative text-center mx-2">
-            <i class="fa-solid fa-user account-icons"></i>
+            <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
           </button>
         </div>
-        <!-- Add d-none to class to upon sign-in -->
-        <div class="">
+        <!-- Add d-none to class upon sign-in -->
+        <div>
           <button type="button" class="btn btn-brown mx-2">
-            <a href="">SIGN IN</a>
+            <a href="loginPage.html">LOG IN</a>
           </button>
           <button type="button" class="btn btn-brown mx-2">
             <a href="">SIGN UP</a>
           </button>
         </div>
         <button type="button" class="account-button position-relative text-center mx-2">
+
           <i class="fa-solid fa-bag-shopping account-icons p-0"></i>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
             0
@@ -74,11 +84,60 @@
     <div id="ads-carousel" class="container p-0">
       <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="true">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="4000">
+          <div class="carousel-item active" data-bs-interval="5000">
             <a href="promopage.html">
               <img src="images\ads1.gif" class="d-block w-100" alt="..." /></a>
+
+            <!--COUNTDOWN-->
+            <div id="countdown-homepage" class="container my-2 d-flex gap-4 gap-3 position-absolute">
+              <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
+                <div class="hrs fw-bold fs-1">HOURS </div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-end">
+                <h1 class="display-1">:</h1>
+              </div>
+              <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                <div class="hrs fw-bold fs-1">MINUTES</div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
+                    <div class="top">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-end">
+                <h1 class="display-1">:</h1>
+              </div>
+              <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                <div class="hrs fw-bold fs-1">SECONDS</div>
+                <div class="segment d-flex gap-3  ">
+                  <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                  <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
+                    <div class="top   ">8</div>
+                    <div class="bottom align-items-end d-flex  ">8</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item" data-bs-interval="4000">
+          <div class="carousel-item" data-bs-interval="5000">
             <a href="promopage.html#new">
               <img src="images\promo-ticket.gif" class="d-block w-100" alt="..." /></a>
           </div>
@@ -95,22 +154,7 @@
         </button>
       </div>
     </div>
-    
-    <!--countDown-->
-    <div class="container my-2  d-flex gap-4   gap-3 align-center justify-content-center ">
-      <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
-        <div class="hrs fw-bold fs-1">HOURS </div>
-        <div class="segment d-flex gap-3  ">
-          <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
-            <div class="top   ">8</div>
-              <div class="bottom align-items-end d-flex  " >8</div>
-          </div>
-              <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
-                <div class="top   ">8</div>
-                  <div class="bottom align-items-end d-flex  " >8</div>
-              </div>
-          </div>
-        </div>
+
        
         <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
           <div class="hrs fw-bold fs-1">MINUTES</div>
@@ -140,28 +184,27 @@
     </div>
     </div>
 
+
     <!-- CATEGORY CARDS -->
     <!-- 1-Category card for drinks -->
     <div class="category-card container d-flex p-0 mt-5">
       <div class="col-8 p-0 gradient">
         <img src="images\arabica.png" alt="" class="category-card-img w-100">
       </div>
-      <div class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center ">
-        <h3 class="poppins">Lorem Ipsum</h3>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut
-          labore et dolore magna aliqua.</p>
-        <button class="btn btn-white mt-3">click me</button>
+      <div
+        class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
+        <h3 class="poppins">A cup of fresh brews for every mood.</h3>
+        <p>Get your daily dose of caffeine, freshly brewed everyday.</p>
+        <button class="btn btn-primary mt-3 poppins">See menu</button>
       </div>
     </div>
     <!-- 1-Category card for pastries -->
     <div class="category-card container d-flex p-0 mt-5">
-      <div class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center ">
-        <h3 class="poppins">Lorem Ipsum</h3>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut
-          labore et dolore magna aliqua.</p>
-        <button class="btn btn-white mt-3">click me</button>
+      <div
+        class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
+        <h3 class="poppins">Baked with love.</h3>
+        <p>We bring the taste of home-baked goodness.</p>
+        <button class="btn btn-primary mt-3 poppins">See menu</button>
       </div>
       <div class="col-8 p-0">
         <img src="images\arabica.png" alt="" class="category-card-img w-100">
@@ -172,22 +215,20 @@
       <div class="col-8 p-0">
         <img src="images\arabica.png" alt="" class="category-card-img w-100">
       </div>
-      <div class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center ">
-        <h3 class="poppins">Lorem Ipsum</h3>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut
-          labore et dolore magna aliqua.</p>
-        <button class="btn btn-white mt-3">click me</button>
+      <div
+        class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
+        <h3 class="poppins">Brew at home.</h3>
+        <p>Try our selections of premium roasted coffee beans.</p>
+        <button class="btn btn-primary mt-3 poppins">Try it</button>
       </div>
     </div>
     <!-- 1-Category card for merch -->
     <div class="category-card container d-flex p-0 mt-5">
-      <div class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center ">
-        <h3 class="poppins">Lorem Ipsum</h3>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut
-          labore et dolore magna aliqua.</p>
-        <button class="btn btn-white mt-3">click me</button>
+      <div
+        class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
+        <h3 class="poppins">Merch, merch, merch!</h3>
+        <p>Get our limited edition merch for yourself or as a gift.</p>
+        <button class="btn btn-primary mt-3 poppins">See more</button>
       </div>
       <div class="col-8 p-0">
         <img src="images\arabica.png" alt="" class="category-card-img w-100">
@@ -196,82 +237,80 @@
 
 
     <!-- CATEGORIES -->
-    <div id="main_content" class="container d-flex flex-column p-0 mt-5">
-      <div id="category" class="container d-flex justify-content-between w-75">
-        <div class="position-relative text-center">
-          <a href="product.html#brewed">
-            <img src="images\cat-coffee.svg" alt="" class="category-item mb-2" />
-            <div>FRESHLY BREWED</div>
-          </a>
-        </div>
-        <div class="position-relative text-center">
-          <a href="product.html#baked">
-            <img src="images\cat-pastry.svg" alt="" class="category-item mb-2" />
-            <div>FRESHLY BAKED</div>
-          </a>
-        </div>
-        <div class="position-relative text-center">
-          <a href="product.html">
-            <img src="images\cat-all.svg" alt="" class="category-item mb-2" />
-            <div>ALL PRODUCTS</div>
-          </a>
-        </div>
-        <div class="position-relative text-center">
-          <a href="product.html#beans">
-            <img src="images\cat-beans.svg" alt="" class="category-item mb-2" />
-            <div>BREW AT HOME</div>
-          </a>
-        </div>
-        <div class="position-relative text-center">
-          <a href="product.html#merch">
-            <img src="images\cat-merch.svg" alt="" class="category-item mb-2" />
-            <div>MERCH</div>
-          </a>
-        </div>
-      </div>
+    <div class="container d-flex flex-column p-0 py-5">
       <!-- SEARCH BAR -->
-      <form action="product.html" class="d-flex searchbar w-50 mt-4 align-self-center">
-        <input class="form-control m-0 search-input" type="search" placeholder="Search Products"
-          aria-label="Search Products" />
+      <form action="product.html" class="d-flex searchbar w-50 mb-5 align-self-center">
+        <input class="form-control m-0" type="search" placeholder="Search Products" aria-label="Search Products" />
         <button class="btn btn-light m-0" type="submit">
           <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon3/mt-search.svg" alt=""
             width="20px" />
         </button>
       </form>
+
+      <!-- CATEGORIES CONTAINER -->
+      <div id="category" class="d-flex justify-content-center">
+        <div class="position-relative text-center mx-5">
+          <a href="product.html#brewed">
+            <img src="images\cat-coffee.svg" alt="" class="category-item mb-2" />
+          </a>
+          <div class="poppins">FRESHLY BREWED</div>
+        </div>
+        <div class="position-relative text-center mx-5">
+          <a href="product.html#baked">
+            <img src="images\cat-pastry.svg" alt="" class="category-item mb-2" />
+          </a>
+          <div class="poppins">FRESHLY BAKED</div>
+        </div>
+        <div class="position-relative text-center mx-5">
+          <a href="product.html#beans">
+            <img src="images\cat-beans.svg" alt="" class="category-item mb-2" />
+          </a>
+          <div class="poppins">BREW AT HOME</div>
+        </div>
+        <div class="position-relative text-center mx-5">
+          <a href="product.html#merch">
+            <img src="images\cat-merch.svg" alt="" class="category-item mb-2" />
+          </a>
+          <div class="poppins">MERCH</div>
+        </div>
+      </div>
     </div>
-    <div class="anchor-bottom"></div>
 
     <!-- FOOTER -->
-    <div class="container text-center my-5 p-0">
+    <div class="footer container text-center p-3">
       <!-- Footer links -->
-      <div class="font-20">
-        <a href="" class="poppins">Our Company</a>
-        <span class="poppins mx-3 text-burly">-</span>
-        <a href="" class="poppins">Contact Us</a>
-        <span class="poppins mx-3 text-burly">-</span>
-        <a href="" class="poppins">Buy Gift Cards</a>
-        <span class="poppins mx-3 text-burly">-</span>
-        <a href="" class="poppins">FAQs</a>
+      <div class="links">
+        <a href="">Our Company</a>
+        <span class="mx-3 text-burly">-</span>
+        <a href="">Contact Us</a>
+        <span class="mx-3 text-burly">-</span>
+        <a href="">Buy Gift Cards</a>
+        <span class="mx-3 text-burly">-</span>
+        <a href="">FAQs</a>
       </div>
       <!-- Like us on our social media -->
       <div class="container d-flex flex-column my-3">
         <div class="font-20">Follow us for updates!</div>
-        <div>
+        <div class="social-media">
           <a href="">
-            <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook" class="soc-med mx-2" />
+            <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook" class="mx-2" />
           </a>
           <a href="">
-            <img src="https://img.icons8.com/ios/250/342924/instagram-new.png" alt="Instagram"
-              class="soc-med mx-2" /></a>
+            <img src="https://img.icons8.com/ios/250/342924/instagram-new.png" alt="Instagram" class="mx-2" /></a>
           <a href="">
-            <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="soc-med mx-2" /></a>
+            <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="mx-2" /></a>
         </div>
       </div>
-      <div class="">&copy; 2022 COFFEE TO GO</div>
+      <div>&copy; 2022 COFFEE TO GO</div>
     </div>
   </div>
+
 </body>
+
 <script src="./countDown.js"></script>
 <script src="./cart.js"></script>
+
+
+
 
 </html>

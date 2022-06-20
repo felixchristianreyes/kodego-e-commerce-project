@@ -62,6 +62,50 @@
             outline: 0;
         }
 
+        .c-height {
+            height: 760px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #bridgeContainer span.hed {
+            z-index: 999;
+            color: #ffffff;
+        }
+
+        #bridge {
+
+            display: block;
+            margin: 0 auto;
+            background-image: url('');
+            background-size: cover;
+            width: 100%;
+            max-width: 750px;
+            height: 250px;
+            cursor: crosshair;
+
+        }
+
+        #bridgeContainer {
+            text-align: center;
+            font-family: Avenir, sans-serif;
+        }
+
+        #bridgeContainer figcaption {
+            margin-top: 2rem;
+        }
+
+        #scratch-beating {
+        height: 100%;
+        animation: 2s ease 0s infinite beat;
+        }
+
+        @keyframes beat {
+        0%, 50%, 100% { transform: scale(1, 1); }
+        30%, 80% { transform: scale(0.92, 0.95); }
+        }
     </style>
 
 </head>
@@ -71,72 +115,40 @@
     <!-- BACKGROUND -->
     <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
 
-    <header>
-        <div class="top-nav-prod container d-flex p-2">
-            <!-- LOGO -->
-            <div class="container col-2 d-flex align-content-center justify-content-center p-3">
-                <a href="homepage.html"><img src="images\logo-dark.svg" alt="" class="logo-prod"></a>
-            </div>
+    <header class="top-nav container sticky-top d-flex justify-content-between px-5 py-3 w-75">
+        <!-- TOP NAV -->
 
-            <!-- CATEGORIES -->
-            <div id="category" class="container d-flex justify-content-around col-7 mt-2">
-                <div class="position-relative text-center">
-                    <a href="#brewed">
-                        <img src="images\cat-coffee.svg" alt="" class="category-item mb-1">
-                        <div>FRESHLY BREWED</div>
-                    </a>
-                </div>
-                <div class="position-relative text-center">
-                    <a href="#baked">
-                        <img src="images\cat-pastry.svg" alt="" class="category-item mb-1">
-                        <div>FRESHLY BAKED</div>
-                    </a>
-                </div>
-
-                <div class="position-relative text-center">
-                    <a href="product.html#top">
-                        <img src="images\cat-all.svg" alt="" class="category-item mb-1">
-                        <div>ALL PRODUCTS</div>
-                    </a>
-                </div>
-
-                <div class="position-relative text-center">
-                    <a href="#beans">
-                        <img src="images\cat-beans.svg" alt="" class="category-item mb-1">
-                        <div>BREW AT HOME</div>
-                    </a>
-                </div>
-                <div class="position-relative text-center">
-                    <a href="#merch">
-                        <img src="images\cat-merch.svg" alt="" class="category-item mb-1">
-                        <div>MERCH</div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SIGN IN-UP -->
-            <div class="opacity-p8 container col-3 d-flex align-self-center justify-content-center">
-                <button type="button" class="custom-button mx-1">
-                    <a href="">SIGN IN</a>
-                </button>
-                <button type="button" class="custom-button mx-1">
-                    <a href="">SIGN UP</a>
-                </button>
-                <button type="button" class="bag-button position-relative text-center mx-2">
-                    <i class="fa-solid fa-bag-shopping bag text-brown"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        2
-                    </span>
-                </button>
-            </div>
-
-            <!-- NAV TAB -->
+        <!-- LOGO -->
+        <div class="d-flex align-center justify-content-center">
+            <img src="images\logo-dark.svg" alt="" class="h-100">
         </div>
+
+        <!-- ALL PRODUCTS -->
+        <div class="nav-category-container d-flex align-content-center justify-content-center text-center  w-50">
+            <div class="nav-category">
+                <a href="product.html">
+                    <img src="images\cat-all.svg" alt="" class="category-item mb-2">
+                </a>
+                <p class="font-14">ALL PRODUCTS</p>
+            </div>
+        </div>
+
+
+        <!-- ACCOUNT -->
+        <div class="d-flex align-self-center justify-content-end">
+            <button type="button" class="account-button position-relative text-center mx-2">
+                <a href="cart.html" class="fa-solid fa-bag-shopping account-icons p-0"></a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                </span>
+            </button>
+        </div>
+
     </header>
 
     <main>
         <section>
-            <div class="container py-5 w-75">
+            <div class="container py-5 w-75 c-height">
                 <div class="row">
                     <!-- Sidebar -->
                     <div class="col-lg-4">
@@ -162,24 +174,42 @@
                             <div class="card-header">
                                 <h1>Rewards</h1>
                             </div>
+
+                            <!--Voucher-->
                             <div class="card-body">
-                                <div class="row" style="height: 760px;">
+                                <div class="row">
                                     <div>
+                                        <h2>Lottery Ticket</h2>
+                                        <ul>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">Voucher 1
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Voucher-->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div>
+
+                                        <h2>Vouchers</h2>
                                         <ul>
                                             <div class="card">
                                                 <div class="card-body">
                                                     <li>Voucher 1</li>
                                                 </div>
                                             </div>
-                                            
-
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
         </section>
@@ -189,57 +219,59 @@
     <footer class="container text-center py-5 pb-3 pt-3 w-75 custom-border-top-black">
 
         <!-- Footer links -->
-        <div class="font-20">
-            <a href="" class="poppins">Our Company</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">Contact Us</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">Buy Gift Cards</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">FAQs</a>
+        <div class="links">
+            <a href="">Our Company</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">Contact Us</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">Buy Gift Cards</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">FAQs</a>
         </div>
         <!-- Like us on our social media -->
-        <div class="container d-flex flex-column mt-3">
+        <div class="container d-flex flex-column my-3">
             <div class="font-20">Follow us for updates!</div>
-            <div>
+            <div class="social-media">
                 <a href="">
-                    <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook"
-                        class="soc-med mx-2">
+                    <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook" class="mx-2" />
                 </a>
                 <a href="">
                     <img src="https://img.icons8.com/ios/250/342924/instagram-new.png" alt="Instagram"
-                        class="soc-med mx-2"></a>
+                        class="mx-2" /></a>
                 <a href="">
-                    <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="soc-med mx-2"></a>
+                    <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="mx-2" /></a>
             </div>
         </div>
-        <div class="pt-2">© 2022 COFFEE TO GO</div>
-
-
+        <div>&copy; 2022 COFFEE TO GO</div>
 
     </footer>
 
     <!--Modal-->
     <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg rounded">
             <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h1 class="display-5">You have successfully purchased a min. of <span>₱ 350.00</span></h1>
+                <div class="modal-header d-flex justify-content-center">
+                    <h2 id="scratch-beating">Scratch, scratch, scratch</h2>
                 </div>
+
                 <div class="modal-body text-center">
-                    <p>1 Ticket has been added to your account</p>
-                    <p>To use your available ticket, please navigate to <a class="btn btn-white bg-floralwhite">Account
-                            > Rewards</a></p>
+                    <figure id="bridgeContainer rounded">
+                        <canvas id="bridge" width="750" height="465"></canvas>
+                        <h4 class="pt-4">Get 3 consecutive beans to earn a random merch or voucher!</h4>
+                    </figure>
                 </div>
-                <div class="modal-footer d-flex">
-                    <button type="button" class="btn btn-white justify-content-base">Print Receipt</button>
-                    <button type="button" class="btn btn-dark">Back to Shop</button>
+
+                <div class="modal-footer ">
+
+                    <a href="profile-rewards.html"><button class="btn btn-dark">Close</button></a>
                 </div>
+
             </div>
         </div>
     </div>
 
+    <script src="scratch.js"></script>
 </body>
 
 </html>

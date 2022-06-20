@@ -72,15 +72,38 @@
     <main class="h-100">
 
 
-        <!-- LOGO -->
-        <div class="top-nav container d-flex justify-content-between px-5 py-3 w-75">
+        <header class="top-nav container sticky-top d-flex justify-content-between px-5 py-3 w-75">
+            <!-- TOP NAV -->
+
             <!-- LOGO -->
             <div class="d-flex align-center justify-content-center">
-                <img src="images\logo-dark.svg" alt="" class="logo">
+                <a href="homepage.html"><img src="images\logo-dark.svg" alt="" class="h-100"></a>
             </div>
 
-            
-        </div>
+            <!-- ALL PRODUCTS -->
+            <div class="nav-category-container d-flex align-content-center justify-content-center text-center  w-50">
+                <div class="nav-category">
+                    <a href="product.html">
+                        <img src="images\cat-all.svg" alt="" class="category-item mb-2">
+                    </a>
+                    <p class="font-14">ALL PRODUCTS</p>
+                </div>
+            </div>
+
+
+            <!-- ACCOUNT -->
+            <div class="d-flex align-self-center justify-content-end">
+                <!-- use if signed-in, remove d-none to show -->
+                <div class="d-flex">
+                    <button type="button" class="account-button position-relative text-center mx-2">
+                        <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </header>
 
         <div class="container w-75 p-0">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -297,7 +320,7 @@
 
 
                                         <div class="pt-5">
-                                            <h6 class="mb-0"><a href="#!" class="text-body"><i
+                                            <h6 class="mb-0"><a href="product.html#page" class="text-body"><i
                                                         class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a>
                                             </h6>
                                         </div>
@@ -342,7 +365,8 @@
                                             <h5 class="text-uppercase">Total price</h5>
                                             <h5>₱ 425.00</h5>
                                         </div>
-                                        <button type="button" class="btn btn-dark btn-block btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>
+                                        <button type="button" class="btn btn-dark btn-block btn-lg"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>
 
                                     </div>
                                 </div>
@@ -354,43 +378,44 @@
         </div>
     </main>
 
-    
+
 
     <footer class="container text-center py-5 pb-3 pt-3 w-75 custom-border-top-black">
 
+
         <!-- Footer links -->
-        <div class="font-20">
-            <a href="" class="poppins">Our Company</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">Contact Us</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">Buy Gift Cards</a>
-            <span class="poppins mx-3 text-burly">-</span>
-            <a href="" class="poppins">FAQs</a>
+        <div class="links">
+            <a href="">Our Company</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">Contact Us</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">Buy Gift Cards</a>
+            <span class="mx-3 text-burly">-</span>
+            <a href="">FAQs</a>
         </div>
         <!-- Like us on our social media -->
-        <div class="container d-flex flex-column mt-3">
+        <div class="container d-flex flex-column my-3">
             <div class="font-20">Follow us for updates!</div>
-            <div>
+            <div class="social-media">
                 <a href="">
-                    <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook"
-                        class="soc-med mx-2">
+                    <img src="https://img.icons8.com/ios/250/342924/facebook-new.png" alt="Facebook" class="mx-2" />
                 </a>
                 <a href="">
                     <img src="https://img.icons8.com/ios/250/342924/instagram-new.png" alt="Instagram"
-                        class="soc-med mx-2"></a>
+                        class="mx-2" /></a>
                 <a href="">
-                    <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="soc-med mx-2"></a>
+                    <img src="https://img.icons8.com/ios/250/342924/twitter.png" alt="Twitter" class="mx-2" /></a>
             </div>
         </div>
-        <div class="pt-2">© 2022 COFFEE TO GO</div>
+        <div>&copy; 2022 COFFEE TO GO</div>
 
-        
+
 
     </footer>
 
     <!--Modal-->
-    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -398,11 +423,13 @@
                 </div>
                 <div class="modal-body text-center">
                     <p>1 Ticket has been added to your account</p>
-                    <p>To use your available ticket, please navigate to <a class="btn btn-white bg-floralwhite">Account > Rewards</a></p>
+                    <p>To use your available ticket, please navigate to <a href="profile-rewards.html" class="btn btn-white bg-floralwhite">Account
+                            > Rewards</a></p>
                 </div>
                 <div class="modal-footer d-flex">
-                    <button type="button" class="btn btn-white justify-content-base">Print Receipt</button>
-                    <button type="button" class="btn btn-dark">Back to Shop</button>
+                    <button type="button" class="btn btn-white bg-floralwhite justify-content-base">Print
+                        Receipt</button>
+                    <a href="product.html"><button type="button" class="btn btn-dark">Back to Shop</button></a>
                 </div>
             </div>
         </div>
