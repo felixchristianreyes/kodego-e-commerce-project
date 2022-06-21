@@ -8,6 +8,8 @@
   --color-floralwhite: rgb(255, 250, 240);
   --color-white: rgb(255, 255, 255);
   --color-yellow: rgb(214, 176, 71);
+  --color-crimson: rgb(220, 20, 60);
+  --color-flesh: rgb(233, 185, 148);
 }
 
 * {
@@ -72,6 +74,20 @@ a:hover {
   color: var(--color-burlywood) !important;
 }
 
+.addtobag {
+  font-size: 1.5rem;
+  color: var(--color-brown);
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+.addtobag span {
+  font-size: 2rem;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+
 .anchor-top {
   display: block;
   height: 182px; /*same height as header*/
@@ -107,6 +123,10 @@ a:hover {
 }
 .category-item:hover {
   box-shadow: 0 0 3px 1px var(--color-brown);
+}
+
+.dashedline {
+  border-top: 2px dashed var(--color-brown);
 }
 
 .font-20 {
@@ -165,22 +185,26 @@ a:hover {
 .tags .best-seller,
 .tags .new-arrival {
   margin: 0 2px 0 2px;
+  padding: 0 4px 0 4px;
+  max-width: min-content;
   font-size: 0.8rem;
   text-align: center;
   border-radius: 5px;
-  color: var(--color-white);
+  color: var(--color-brown);
+  font-weight: 600;
+  opacity: 0.85;
 }
 
 .tags .anniv-special {
-  background-color: var(--color-brown);
-}
-
-.tags .best-seller {
   background-color: var(--color-yellow);
 }
 
-.tags .new-arrival {
+.tags .best-seller {
   background-color: var(--color-burlywood);
+}
+
+.tags .new-arrival {
+  background-color: var(--color-coffee);
 }
 
 .text-burly {
