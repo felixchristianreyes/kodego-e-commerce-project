@@ -73,11 +73,11 @@
           <button type="button" class="account-button position-relative text-center mx-2">
 
             <i class="fa-solid fa-bag-shopping account-icons p-0"></i>
-           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
               0
 
 
-          
+
             </span>
           </button>
         </div>
@@ -200,13 +200,13 @@
     </div>
 
     <div id="main_content" class="container p-0">
-      <!--DRINKS SECTION-->
+      <!--1-DRINKS SECTION-->
       <div class="container p-0">
         <div>
           <h2>Freshly Brewed Coffee & Tea</h2>
         </div>
         <div class="row mb-2 p-1">
-          <!-- PRODUCT 1 -->
+          <!-- PRODUCT 1.1 -->
           <div class="col-md-4 col-lg-3 col-xl-2 p-2">
             <div class="card my-2 position-relative">
               <a href="item.html" class="stretched-link"></a>
@@ -220,28 +220,34 @@
                   </div>
                 </div>
                 <!-- Tags -->
-                <div class="tags d-flex justify-content-center align-items-center invisible">
+                <div class="tags d-flex justify-content-center align-items-center">
+                  <!-- sample tags -->
                   <div class="anniv-special">Anniversary Special</div>
-                  <div class="best-seller">Best Seller</div>
-                  <div class="new-arrival">New Arrival</div>
+                  <div class="best-seller d-none">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
                 </div>
-                <div class="container d-flex p-0 my-2">
-                  <div class="w-25">
-                    <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                <div class=" container d-flex p-0 my-2">
+                  <!-- added align-self-center -->
+                  <div class="w-75 align-self-center">
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                   </div>
-                  <div class="w-75 text-end">
-                    <i class="fa-solid fa-star icon-prop"></i>
-                    <i class="fa-solid fa-star icon-prop"></i>
-                    <i class="fa-solid fa-star icon-prop"></i>
-                    <i class="fa-solid fa-star icon-prop"></i>
-                    <i class="fa-regular fa-star icon-prop"></i>
+                  <div class="w-25 text-end px-1">
+                    <!-- use this 'a' for 'add to bag' icon -->
+                    <a class="icon-like addtobag" title="Add this to bag">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <span>+</span>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- PRODUCT 2 -->
+          <!-- PRODUCT 1.2 -->
           <div class="col-md-4 col-lg-3 col-xl-2 p-2">
             <div class="card my-2 position-relative">
               <a href="item.html" class="stretched-link"></a>
@@ -256,13 +262,16 @@
                 </div>
                 <!-- Tags -->
                 <div class="tags d-flex justify-content-center align-items-center">
-                  <!-- ..add tag/s here.. -->
+                  <!-- sample tags -->
+                  <div class="anniv-special">Anniversary Special</div>
+                  <div class="best-seller d-none">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
                 </div>
                 <div class="container d-flex p-0 my-2">
                   <div class="w-25">
                     <a class="fa-regular fa-heart icon-like icon-prop"></a>
                   </div>
-                  <div class="w-75 text-end">
+                  <div class="w-75 text-end align-self-center">
                     <i class="fa-solid fa-star icon-prop"></i>
                     <i class="fa-solid fa-star icon-prop"></i>
                     <i class="fa-solid fa-star icon-prop"></i>
@@ -273,6 +282,180 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="dashedline mb-5"></div>
+
+      <!--2-PASTRY SECTION-->
+      <div class="container p-0">
+        <div>
+          <h2>Freshly Baked Pastries</h2>
+        </div>
+        <div class="row mb-2 p-1">
+          <!-- PRODUCT 2.1 -->
+          <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+            <div class="card my-2 position-relative">
+              <a href="item.html" class="stretched-link"></a>
+              <img src="images\croissant.png" class="card-img-top" alt="..." />
+              <div class="card-body py-2">
+                <div class="card-title-container">
+                  <h5 class="card-title text-center fw-bold">Croissant</h5>
+                  <div class="text-center">
+                    <span class="text-muted price discount px-2">&#8369;200</span><span
+                      class="text-danger price">&#8369;160</span>
+                  </div>
+                </div>
+                <!-- Tags -->
+                <div class="tags d-flex justify-content-center align-items-center">
+                  <!-- sample tags -->
+                  <div class="anniv-special">Anniversary Special</div>
+                  <div class="best-seller d-none">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
+                </div>
+                <div class="container d-flex p-0 my-2">
+                  <div class="w-25">
+                    <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                  </div>
+                  <div class="w-75 text-end align-self-center">
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 2.2 -->
+          <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+            <div class="card my-2 position-relative">
+              <a href="item.html" class="stretched-link"></a>
+              <img src="images\cheesecake.png" class="card-img-top" alt="..." />
+              <div class="card-body py-2">
+                <div class="card-title-container">
+                  <h5 class="card-title text-center fw-bold">Strawberry Cheesecake</h5>
+                  <div class="text-center">
+                    <span class="text-muted price discount px-2">&#8369;175</span><span
+                      class="text-danger price">&#8369;140</span>
+                  </div>
+                </div>
+                <!-- Tags -->
+                <div class="tags d-flex justify-content-center align-items-center">
+                  <!-- sample tags -->
+                  <div class="anniv-special">Anniversary Special</div>
+                  <div class="best-seller">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
+                </div>
+                <div class="container d-flex p-0 my-2">
+                  <div class="w-25">
+                    <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                  </div>
+                  <div class="w-75 text-end align-self-center">
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashedline mb-5"></div>
+
+      <!--3-BEANS SECTION-->
+      <div class="container p-0">
+        <div>
+          <h2>Premium Roasted Coffee Beans</h2>
+        </div>
+        <div class="row mb-2 p-1">
+          <!-- PRODUCT 3.1 -->
+          <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+            <div class="card my-2 position-relative">
+              <a href="item.html" class="stretched-link"></a>
+              <img src="images\robusta.png" class="card-img-top" alt="..." />
+              <div class="card-body py-2">
+                <div class="card-title-container">
+                  <h5 class="card-title text-center fw-bold">Robusta Coffee Beans</h5>
+                  <div class="text-center">
+                    <span>Starts at </span>
+                    <span class="text-muted price discount px-2">&#8369;100</span><span
+                      class="text-danger price">&#8369;80</span>
+                  </div>
+                </div>
+                <!-- Tags -->
+                <div class="tags d-flex justify-content-center align-items-center">
+                  <!-- sample tags -->
+                  <div class="anniv-special">Anniversary Special</div>
+                  <div class="best-seller d-none">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
+                </div>
+                <div class="container d-flex p-0 my-2">
+                  <div class="w-25">
+                    <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                  </div>
+                  <div class="w-75 text-end align-self-center">
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-regular fa-star icon-prop"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="dashedline mb-5"></div>
+
+      <!--4-MERCH SECTION-->
+      <div class="container p-0">
+        <div>
+          <h2>Merchandise</h2>
+        </div>
+        <div class="row mb-2 p-1">
+          <!-- PRODUCT 4.1 -->
+          <div class="col-md-4 col-lg-3 col-xl-2 p-2">
+            <div class="card my-2 position-relative">
+              <a href="item.html" class="stretched-link"></a>
+              <img src="images\glass.png" class="card-img-top" alt="..." />
+              <div class="card-body py-2">
+                <div class="card-title-container">
+                  <h5 class="card-title text-center fw-bold">Glass Tumbler</h5>
+                  <div class="text-center">
+                    <span class="text-muted price discount px-2">&#8369;200</span><span
+                      class="text-danger price">&#8369;160</span>
+                  </div>
+                </div>
+                <!-- Tags -->
+                <div class="tags d-flex justify-content-center align-items-center">
+                  <!-- sample tags -->
+                  <div class="anniv-special">Anniversary Special</div>
+                  <div class="best-seller d-none">Best Seller</div>
+                  <div class="new-arrival d-none">New Arrival</div>
+                </div>
+                <div class="container d-flex p-0 my-2">
+                  <div class="w-25">
+                    <a class="fa-regular fa-heart icon-like icon-prop"></a>
+                  </div>
+                  <div class="w-75 text-end align-self-center">
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-solid fa-star icon-prop"></i>
+                    <i class="fa-regular fa-star icon-prop"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -309,4 +492,5 @@
   <script src="./countDown.js"></script>
 </body>
 <script src="./cart.js"></script>
+
 </html>

@@ -72,7 +72,7 @@
         </div>
         <button type="button" class="account-button position-relative text-center mx-2">
 
-         <a href="cart.html"> <i class="fa-solid fa-bag-shopping account-icons p-0"></i></a>
+          <a href="cart.html"> <i class="fa-solid fa-bag-shopping account-icons p-0"></i></a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
             0
           </span>
@@ -138,8 +138,12 @@
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <a href="promopage.html#new">
+            <a href="#">
               <img src="images\promo-ticket.gif" class="d-block w-100" alt="..." /></a>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <a href="#">
+              <img src="images\ads2.gif" class="d-block w-100" alt="..." /></a>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -155,20 +159,20 @@
       </div>
     </div>
 
-       
-      
+
+
 
     <!-- CATEGORY CARDS -->
     <!-- 1-Category card for drinks -->
     <div class="category-card container d-flex p-0 mt-5">
       <div class="col-8 p-0 gradient">
-        <img src="images\arabica.png" alt="" class="category-card-img w-100">
+        <img src="images\banner-drinks.png" alt="" class="category-card-img w-100">
       </div>
       <div
         class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
         <h3 class="poppins">A cup of fresh brews for every mood.</h3>
         <p>Get your daily dose of caffeine, freshly brewed everyday.</p>
-        <button class="btn btn-primary mt-3 poppins">See menu</button>
+        <a href="product.html#brewed" class="btn btn-primary mt-3 poppins">See menu</a>
       </div>
     </div>
     <!-- 1-Category card for pastries -->
@@ -177,22 +181,22 @@
         class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
         <h3 class="poppins">Baked with love.</h3>
         <p>We bring the taste of home-baked goodness.</p>
-        <button class="btn btn-primary mt-3 poppins">See menu</button>
+        <a href="product.html#baked" class="btn btn-primary mt-3 poppins">See menu</a>
       </div>
       <div class="col-8 p-0">
-        <img src="images\arabica.png" alt="" class="category-card-img w-100">
+        <img src="images\banner-pastry.png" alt="" class="category-card-img w-100">
       </div>
     </div>
     <!-- 1-Category card for coffee beans -->
     <div class="category-card container d-flex p-0 mt-5">
       <div class="col-8 p-0">
-        <img src="images\arabica.png" alt="" class="category-card-img w-100">
+        <img src="images\banner-beans.png" alt="" class="category-card-img w-100">
       </div>
       <div
         class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
         <h3 class="poppins">Brew at home.</h3>
         <p>Try our selections of premium roasted coffee beans.</p>
-        <button class="btn btn-primary mt-3 poppins">Try it</button>
+        <a href="product.html#beans" class="btn btn-primary mt-3 poppins">Try it</a>
       </div>
     </div>
     <!-- 1-Category card for merch -->
@@ -201,10 +205,10 @@
         class="category-card-description col-4 px-3 d-flex flex-column justify-content-center align-items-center text-center">
         <h3 class="poppins">Merch, merch, merch!</h3>
         <p>Get our limited edition merch for yourself or as a gift.</p>
-        <button class="btn btn-primary mt-3 poppins">See more</button>
+        <a href="product.html#merch" class="btn btn-primary mt-3 poppins">See more</a>
       </div>
       <div class="col-8 p-0">
-        <img src="images\arabica.png" alt="" class="category-card-img w-100">
+        <img src="images\banner-merch.png" alt="" class="category-card-img w-100">
       </div>
     </div>
 
@@ -284,9 +288,8 @@
 <script src="./cart.js"></script>
 
 <script>
-  document.getElementById('userName').innerHTML =  localStorage.getItem('textvalue')
-
-  </script>
+  document.getElementById('userName').innerHTML = localStorage.getItem('textvalue')
+</script>
 
 
 
