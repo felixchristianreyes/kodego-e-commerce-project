@@ -124,93 +124,63 @@
       </div>
     </div>
 
-    <!-- ADS CAROUSEL -->
-    <div id="ads-carousel" class="container p-0 w-50 mb-5">
-      <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
+    <!-- ITEM SECTION -->
+    <div id="main_content" class="h-100 p-0">
+      <form id="order" action="" class="row d-flex flex column justify-content-center align-items-center b-2">
+        <div class="col-5 p-0 d-flex flex-column align-items-center">
+          <img src="images\latte.png" alt="" class="item-photo" />
+          <h2 class="poppins fw-bolder">Iced Latte</h2>
+          <h4>&#8369;125</h4>
         </div>
+        <div class="col-7 mb-2">
 
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="4000">
-            <a href="promopage.html">
-              <img src="images\ads1.gif" class="d-block w-100" alt="..." /></a>
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <a href="promopage.html#new">
-              <img src="images\ads2.gif" class="d-block w-100" alt="..." /></a>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <div id="main_content" class="row p-0">
-      <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-end">
-        <img src="images\latte.png" alt="" class="item-photo" />
-        <h2 class="fw-bolder">Iced Latte</h2>
-      </div>
-      <div class="col-8 mb-2">
-        <form id="order" action="" class="d-flex flex-column h-100 justify-content-between">
-          <div class="row">
-            <!-- SIZE -->
-            <div class="col-6 px-3">
-              <div class="description-title mb-5">
-                <h4 class="fw-bold">Size</h4>
+          <!-- SIZE -->
+          <div class="mb-4">
+            <div class="description-title mb-4">
+              <h4 class="fw-bold">Size</h4>
+            </div>
+            <div class="container d-flex justify-content-around w-75">
+              <!-- small -->
+              <div class="size-item">
+                <input type="radio" id="small" value="small" name="size" />
+                <label for="small">
+                  <div class="size-container d-flex py-0 px-4 align-items-end">
+                    <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
+                  </div>
+                  <p class="text-center mt-1">SMALL</p>
+                </label>
               </div>
-              <div class="container d-flex justify-content-between">
-                <!-- small -->
-                <div class="size-item">
-                  <input type="radio" id="small" value="small" name="size" />
-                  <label for="small">
-                    <div class="size-container d-flex py-0 px-4 align-items-end">
-                      <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
-                    </div>
-                    <p class="text-center mt-1">SMALL</p>
-                  </label>
-                </div>
-                <!-- medium -->
-                <div class="size-item">
-                  <input type="radio" id="medium" value="medium" name="size" checked />
-                  <label for="medium">
-                    <div class="size-container d-flex py-0 px-3 align-items-end">
-                      <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
-                    </div>
-                    <p class="text-center mt-1">MEDIUM</p>
-                  </label>
-                </div>
-                <!-- large -->
-                <div class="size-item">
-                  <input type="radio" id="large" value="large" name="size" />
-                  <label for="large">
-                    <div class="size-container d-flex py-0 px-1 align-items-end">
-                      <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
-                    </div>
-                    <p class="text-center mt-1">LARGE</p>
-                  </label>
-                </div>
+              <!-- medium -->
+              <div class="size-item">
+                <input type="radio" id="medium" value="medium" name="size" checked />
+                <label for="medium">
+                  <div class="size-container d-flex py-0 px-3 align-items-end">
+                    <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
+                  </div>
+                  <p class="text-center mt-1">MEDIUM</p>
+                </label>
+              </div>
+              <!-- large -->
+              <div class="size-item">
+                <input type="radio" id="large" value="large" name="size" />
+                <label for="large">
+                  <div class="size-container d-flex py-0 px-1 align-items-end">
+                    <img src="images\cup.svg" alt="" class="size-img img-fluid align-bottom" />
+                  </div>
+                  <p class="text-center mt-1">LARGE</p>
+                </label>
               </div>
             </div>
-
+          </div>
+          <div class="row">
             <!-- CUSTOMIZATION -->
-            <div class="col-6">
-              <div class="description-title mb-5">
+            <div class="col">
+              <div class="description-title mb-3">
                 <h4 class="fw-bold">Customizations</h4>
               </div>
               <div class="container d-flex flex-column justify-content-center p-0">
                 <div class="container dropdown p-0">
-                  <button class="custom-button btn-lg dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
+                  <button class="btn btn-brown btn-lg w-100" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Milk Options
                   </button>
@@ -222,7 +192,7 @@
                 </div>
 
                 <div class="container dropdown my-4 p-0">
-                  <button class="custom-button btn-lg dropdown-toggle w-100" type="button" id="dropdownMenuButton2"
+                  <button class="btn btn-brown btn-lg w-100" type="button" id="dropdownMenuButton2"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Sugar Level
                   </button>
@@ -235,20 +205,25 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <button type="submit" class="align-self-center mt-3">
-            <div class="mt-2 mx-2">
-              <h4 class="poppins fw-bold">ADD TO BAG</h4>
+            <div class="col">
+              <div class="description-title mb-3">
+                <label for="add-notes">
+                  <h4 class="fw-bold">Additional Notes</h4>
+                </label>
+              </div>
+              <textarea name="notes" id="add-notes"></textarea>
             </div>
-          </button>
-        </form>
-      </div>
-      <div class="anchor-bottom"></div>
+          </div>
+          <div>*Prices may be subject to change on some customizations and additions.</div>
+        </div>
+        <button type="submit" class="btn btn-dark poppins fw-bold align-self-end mt-5">
+          ADD TO BAG
+        </button>
+      </form>
     </div>
-
+    <div class="anchor-bottom"></div>
     <!-- FOOTER -->
-    <div class="footer container text-center p-3">
+    <div class="footer container text-center p-3 fixed-bottom">
       <!-- Footer links -->
       <div class="links">
         <a href="">Our Company</a>
@@ -275,6 +250,7 @@
       <div>&copy; 2022 COFFEE TO GO</div>
     </div>
   </div>
+
 </body>
 
 </html>
