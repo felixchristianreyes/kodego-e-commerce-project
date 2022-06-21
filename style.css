@@ -32,6 +32,25 @@
   box-shadow: 0 0 3px 1px var(--color-brown);
   color: inherit;
 }
+.btn-primary:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.btn-dark {
+  background-color: var(--color-brown);
+  border: 0;
+  color: var(--color-white);
+}
+.btn-dark:hover {
+  background-color: var(--color-white);
+  outline: 1px solid var(--color-brown);
+  color: inherit;
+}
+.btn-dark:focus {
+  box-shadow: 0 0 0 3px var(--color-burlywood) !important;
+  outline: none;
+}
 
 .form-control {
   border-color: transparent !important;
@@ -48,12 +67,24 @@ a:hover {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+  width: 100%;
+  height: 60%;
+  overflow: scroll;
+}
+
 #bg-img {
   object-fit: fill;
   width: 100%;
   position: fixed;
   z-index: -50;
   opacity: 0.4;
+}
+
+#order button[type="submit"] {
+  max-width: max-content;
+  padding: 0.5rem;
 }
 
 #page {
@@ -88,6 +119,13 @@ a:hover {
   right: -10px;
 }
 
+.anchor-bottom {
+  display: block;
+  height: 180px; /*same height as footer*/
+  margin-bottom: -180px; /*same height as footer*/
+  visibility: hidden;
+}
+
 .anchor-top {
   display: block;
   height: 182px; /*same height as header*/
@@ -105,6 +143,9 @@ a:hover {
   background-color: var(--color-brown);
   border: 1px solid var(--color-brown);
   color: var(--color-white);
+}
+.btn-brown:focus {
+  box-shadow: 0 0 0 3px var(--color-burlywood);
 }
 
 .card:hover {
@@ -129,6 +170,11 @@ a:hover {
   border-top: 2px dashed var(--color-brown);
 }
 
+.dropdown ul {
+  width: 100%;
+  z-index: 10;
+}
+
 .font-20 {
   font-size: 1.25rem;
 }
@@ -139,6 +185,7 @@ a:hover {
 
 .footer {
   border-top: 2px dashed var(--color-brown);
+  background-color: var(--color-white);
 }
 
 .footer .links a,
@@ -243,6 +290,13 @@ a:hover {
   background-color: floralwhite;
 }
 
+/* ITEM PAGE */
+.item-photo {
+  height: 350px;
+  width: 300px;
+  object-fit: cover;
+}
+
 /* TO BE EDITED . . . . . STILL CHECKING ON OTHER PAGES*/
 
 .opacity-p8 {
@@ -251,12 +305,6 @@ a:hover {
 
 .active {
   font-weight: bolder !important;
-}
-
-.item-photo {
-  height: 350px;
-  width: 300px;
-  object-fit: cover;
 }
 
 .description-title {
@@ -285,14 +333,6 @@ a:hover {
 
 .size-img {
   margin-bottom: 5px;
-}
-
-#order button[type="submit"] {
-  min-width: 75px;
-  height: fit-content;
-  background-color: burlywood;
-  border-radius: 3px;
-  border: none;
 }
 
 .listing-category {
