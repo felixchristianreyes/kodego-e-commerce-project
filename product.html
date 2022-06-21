@@ -23,6 +23,7 @@
   <!-- External CSS-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./product.css">
+  <link rel="stylesheet" href="./modal.css">
   <title>Coffee To Go | All Products</title>
   <link rel="icon" type="image/x-icon" href="images\favicon.svg" />
 
@@ -31,9 +32,11 @@
 
 <body>
   <!-- BACKGROUND -->
+  
   <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
-
+  
   <div id="page" class="container d-flex flex-column p-0">
+    
     <!-- TOP NAV -->
     <div class="sticky-top p-0">
       <div class="top-nav sticky-top d-flex justify-content-between px-5 py-3">
@@ -76,7 +79,19 @@
 
 
 
-        <!-- ACCOUNT -->
+          <!--MODAL-->
+        <div class="modalContainer1" id='modalContainer'>
+          <div class="modal1 rounded d-block ">
+            <div class="ModalButton d-flex justify-content-end p-1">
+              <button class="closemodal align-self-end" onclick="closemodal()"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <h3 class="fs-2 fw-bold">Added to cart</h3>
+          </div>
+        </div>
+
+
+               <!-- ACCOUNT -->
+              
         <div class="d-flex align-self-center justify-content-end">
           <!-- Signed-in, remove d-none to show -->
           <div class="d-flex">
@@ -200,12 +215,15 @@
         </div>
       </div>
 
+    
       <!-- LISTING -->
+ 
       <div class="container">
         <img src="images\title-all-prod.svg" alt="" class="img-fluid mb-3" />
       </div>
       <div class="listing container mt-2 p-0">
         <!-- FRESHLY BREWED -->
+
         <div id="brewed" class="anchor-top"></div>
         <div class="container listing-category mt-3">
           <div id="fresh-brew" class="anchor-top"></div>
@@ -733,12 +751,14 @@
       </div>
       <div>&copy; 2022 COFFEE TO GO</div>
     </div>
-
   </div>
+  
+
 </body>
 
 <script src="./cart.js"></script>
 <script src="./login.js"></script>
+<script src="./addtoCartAnimation.js"></script>
 <script>
   document.getElementById('userName').innerHTML = localStorage.getItem('textvalue')
 </script>

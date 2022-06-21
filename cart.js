@@ -180,3 +180,5 @@ const displayCart = () => {
 };
 onLoading();
 displayCart();
+
+
