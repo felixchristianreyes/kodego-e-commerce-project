@@ -1,14 +1,17 @@
 var bridge = document.getElementById("bridge"),
   bridgeCanvas = bridge.getContext("2d"),
-  brushRadius = bridge.height / 8,
-  img = new Image();
+  img = new Image(),
+  modal = document.querySelector('#reward-modal');
+  h4 = document.querySelector('#h4-modal');
 
 img.onload = function () {
   bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
 };
 img.loc = "./images/";
-img.filename = "promo-ticket.gif";
+img.filename = "overlay.png";
 img.src = img.loc + img.filename;
+
+
 
 function detectLeftButton(event) {
   if ("buttons" in event) {
@@ -36,7 +39,7 @@ function getBrushPos(xRef, yRef) {
 
 function drawDot(mouseX, mouseY) {
   bridgeCanvas.beginPath();
-  bridgeCanvas.arc(mouseX, mouseY, brushRadius, 0, Math.PI * 2, true);
+  bridgeCanvas.arc(mouseX, mouseY, 50, 0, 2 * Math.PI, true);
   bridgeCanvas.fillStyle = "#000";
   bridgeCanvas.globalCompositeOperation = "destination-out";
   bridgeCanvas.fill();
@@ -49,6 +52,7 @@ bridge.addEventListener(
     var leftBut = detectLeftButton(e);
     if (leftBut == 1) {
       drawDot(brushPos.x, brushPos.y);
+      judgeVisible()
     }
   },
   false
@@ -62,7 +66,41 @@ bridge.addEventListener(
     if (touch) {
       var brushPos = getBrushPos(touch.pageX, touch.pageY);
       drawDot(brushPos.x, brushPos.y);
+      judgeVisible()
     }
   },
   false
 );
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
+function judgeVisible() {
+  let randomNum = getRandomInt(1,3);
+  var imageData = bridgeCanvas.getImageData(0, 120, bridge.width, bridge.height),
+      pixels = imageData.data,
+      result = {},
+      i, len;
+  let voucherImg = new Image();
+  const node = document.createElement("div");
+  voucherImg.src = `./images/v-${randomNum}.png`;
+
+  // count alpha values
+  for (i = 0, len = pixels.length; i < len; i += 200) {
+    result[pixels[i]] || (result[pixels[i]] = 0);
+    result[pixels[i]]++;
+  }
+
+  if (result[255] === undefined) {
+    bridge.remove();
+    h4.remove();
+    node.appendChild(voucherImg);
+    document.getElementById("rewards").appendChild(node);
+    alert('Yay, you won something!');
+  }
+
+  console.log(result[255]) ;
+  console.log(result[0]) ;
+}

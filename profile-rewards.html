@@ -79,11 +79,12 @@
 
             display: block;
             margin: 0 auto;
-            background-image: url('');
+            background-image: url('/images/underlay.png');
             background-size: cover;
             width: 100%;
-            max-width: 750px;
-            height: 250px;
+            max-width: 720px;
+            height: 100%;
+            max-height: 360px;
             cursor: crosshair;
 
         }
@@ -192,7 +193,7 @@
                                         <ul>
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">Voucher 1
+                                                    <li data-bs-toggle="modal" data-bs-target="#reward-modal">Voucher 1
                                                     </li>
                                                 </div>
                                             </div>
@@ -256,8 +257,8 @@
     </footer>
 
     <!--Modal-->
-    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="reward-modal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="reward-ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg rounded">
             <div class="modal-content">
                 <div class="modal-header d-flex justify-content-center">
@@ -266,8 +267,9 @@
 
                 <div class="modal-body text-center">
                     <figure id="bridgeContainer rounded">
-                        <canvas id="bridge" width="760" height="465"></canvas>
-                        <h4 class="pt-4">Get 3 consecutive beans to earn a random merch or voucher!</h4>
+                        <canvas id="bridge" width="760" height="450"></canvas>
+                        <h4 id="h4-modal" class="pt-4">Get 3 consecutive beans to earn a random merch or voucher!</h4>
+                        <div id="rewards"></div>
                     </figure>
                 </div>
 
