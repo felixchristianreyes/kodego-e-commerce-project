@@ -25,12 +25,18 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             /* display: none; <- Crashes Chrome on hover */
             -webkit-appearance: none;
             margin: 0;
             /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        ul li {
+            list-style: none;
         }
 
         .bg-grey {
@@ -63,7 +69,7 @@
         }
 
         .c-height {
-            height: 760px;
+            height: 1280px;
         }
 
         body {
@@ -115,6 +121,10 @@
             80% {
                 transform: scale(0.92, 0.95);
             }
+        }
+
+        .no-show {
+            display: none;
         }
     </style>
 
@@ -180,12 +190,12 @@
                     </div>
 
                     <div class="col-lg-8">
-                        <div class="card mb-4">
+                        <div class="mb-4">
                             <div class="card-header">
                                 <h1>Rewards</h1>
                             </div>
 
-                            <!--Voucher-->
+                            <!--Lottery-->
                             <div class="card-body">
                                 <div class="row">
                                     <div>
@@ -193,7 +203,8 @@
                                         <ul>
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <li data-bs-toggle="modal" data-bs-target="#reward-modal">Voucher 1
+                                                    <li id="lotterystuff" data-bs-toggle="modal" data-bs-target="#reward-modal">
+                                                        <img id="lottery-img" src="/images/promo-ticket.gif" class="img-fluid" alt="">
                                                     </li>
                                                 </div>
                                             </div>
@@ -209,10 +220,7 @@
 
                                         <h2>Vouchers</h2>
                                         <ul>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <li>Voucher 1</li>
-                                                </div>
+                                            <div id="voucher">
                                             </div>
                                         </ul>
                                     </div>
@@ -257,8 +265,7 @@
     </footer>
 
     <!--Modal-->
-    <div id="reward-modal" class="modal fade" data-bs-backdrop="static" tabindex="-1"
-        aria-labelledby="reward-ModalLabel" aria-hidden="true">
+    <div id="reward-modal" class="modal fade" tabindex="-1" aria-labelledby="reward-ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg rounded">
             <div class="modal-content">
                 <div class="modal-header d-flex justify-content-center">
@@ -271,13 +278,11 @@
                         <h4 id="h4-modal" class="pt-4">Get 3 consecutive beans to earn a random merch or voucher!</h4>
                         <div id="rewards"></div>
                     </figure>
+                    <button id="modal-btn" class="btn btn-lg bg-floralwhite no-show">Claim Now</button>
                 </div>
-
                 <div class="modal-footer ">
-
-                    <a href="profile-rewards.html"><button class="btn btn-dark">Close</button></a>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal">Close</button>
                 </div>
-
             </div>
         </div>
     </div>

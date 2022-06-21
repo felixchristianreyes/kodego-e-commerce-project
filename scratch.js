@@ -1,17 +1,15 @@
 var bridge = document.getElementById("bridge"),
   bridgeCanvas = bridge.getContext("2d"),
   img = new Image(),
-  modal = document.querySelector('#reward-modal');
-  h4 = document.querySelector('#h4-modal');
-
-img.onload = function () {
-  bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
-};
+  modal = document.querySelector("#reward-modal");
+(h4 = document.querySelector("#h4-modal")),
+  (modalBtn = document.querySelector("#modal-btn")),
+  (img.onload = function () {
+    bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
+  });
 img.loc = "./images/";
 img.filename = "overlay.png";
 img.src = img.loc + img.filename;
-
-
 
 function detectLeftButton(event) {
   if ("buttons" in event) {
@@ -52,7 +50,7 @@ bridge.addEventListener(
     var leftBut = detectLeftButton(e);
     if (leftBut == 1) {
       drawDot(brushPos.x, brushPos.y);
-      judgeVisible()
+      judgeVisible();
     }
   },
   false
@@ -66,7 +64,7 @@ bridge.addEventListener(
     if (touch) {
       var brushPos = getBrushPos(touch.pageX, touch.pageY);
       drawDot(brushPos.x, brushPos.y);
-      judgeVisible()
+      judgeVisible();
     }
   },
   false
@@ -78,14 +76,24 @@ function getRandomInt(min, max) {
 }
 
 function judgeVisible() {
-  let randomNum = getRandomInt(1,3);
-  var imageData = bridgeCanvas.getImageData(0, 120, bridge.width, bridge.height),
-      pixels = imageData.data,
-      result = {},
-      i, len;
+  let randomNum = getRandomInt(1, 3);
+  var imageData = bridgeCanvas.getImageData(
+      0,
+      120,
+      bridge.width,
+      bridge.height
+    ),
+    pixels = imageData.data,
+    result = {},
+    i,
+    len;
   let voucherImg = new Image();
   const node = document.createElement("div");
+  const voucher = document.createElement("li");
+  let newh4 = document.createElement("h4");
   voucherImg.src = `./images/v-${randomNum}.png`;
+  let lotteryImg = document.querySelector("#lottery-img");
+  let lottery = document.querySelector("#lotterystuff");
 
   // count alpha values
   for (i = 0, len = pixels.length; i < len; i += 200) {
@@ -98,9 +106,18 @@ function judgeVisible() {
     h4.remove();
     node.appendChild(voucherImg);
     document.getElementById("rewards").appendChild(node);
-    alert('Yay, you won something!');
-  }
+    modalBtn.classList.remove("no-show");
 
-  console.log(result[255]) ;
-  console.log(result[0]) ;
+    modalBtn.addEventListener("click", () => {
+      document.getElementById("voucher").appendChild(voucher);
+      voucher.appendChild(voucherImg);
+      voucher.classList.add("card");
+      modalBtn.classList.add("no-show");
+      newh4.innerHTML = "No more lottery tickets";
+      lottery.appendChild(newh4);
+      lotteryImg.remove();
+    });
+  }
+  console.log(result[255]);
+  console.log(result[0]);
 }
