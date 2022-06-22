@@ -10,8 +10,8 @@ var nameUser = document.getElementById('name')
 
 
 const isEmpty = () =>{
-    var email = "ruzell@gmail.com"
-    var password = "ruzell"
+    var email = "user@gmail.com"
+    var password = "user1234"
 
     if( inputPass.value && inputEmail.value && nameUser.value ){
         button.removeAttribute("disabled")
