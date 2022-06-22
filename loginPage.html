@@ -38,16 +38,16 @@
         <div class="d-container d-flex flex-column justify-content-center align-items-center ">
           <form class="w-100 d-flex flex-column" id="form">
             <label for="name">Name:</label>
-            <input placeholder="Enter your name" type="text" class="name input rounded mb-2" id="name">
+            <input placeholder="(Optional)" type="text" class="name input rounded mb-2" id="name">
             <p class="nameContainer mb-3"></p>
 
             <label for="email">Email:</label>
-            <input placeholder="Enter your email" type="email" class="email input rounded mb-2" onkeyup="isEmpty()">
+            <input required placeholder="Enter your email" type="email" class="email input rounded mb-2" onkeydown="isEmpty()">
             <label for="password">Password:</label>
-            <input placeholder="Enter your password" type="password" class="password input rounded mb-2"
-              onkeyup="isEmpty()">
+            <input required placeholder="Enter your password" type="password" class="password input rounded mb-2" min="8"
+              onkeydown="isEmpty()">
             <div class="remember my-2">
-              <input type="checkbox" required>
+              <input type="checkbox">
               <label for="">Remember Me</label>
             </div>
             <button class="btn btn-dark w-50 align-self-center " disabled>Login</button>
