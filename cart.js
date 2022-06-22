@@ -1,37 +1,44 @@
 const heartButton = document.querySelectorAll(".fa-cart-arrow-down");
+const tooltTip = document.querySelectorAll('.tooltipContainer')
 
 let products = [
   {
+    id:1,
     name: "Iced Latte",
     tag: "latte",
     price: 125,
     inCart: 0,
   },
   {
+    id:2,
     name: "Iced Mocha",
     tag: "mocha",
     price: 150,
     inCart: 0,
   },
   {
+    id:3,
     name: "Iced Americano",
     tag: "americano",
     price: 100,
     inCart: 0,
   },
   {
+    id:4,
     name: "Iced Orange Espresso",
     tag: "orange-espresso",
     price: 150,
     inCart: 0,
   },
   {
+    id:5,
     name: "Iced Cappuccino",
     tag: "cappuccino",
     price: 150,
     inCart: 0,
   },
   {
+    id:6,
     name: "Iced Macha Green Tea",
     tag: "macha",
     price: 200,
@@ -53,11 +60,12 @@ const onLoading = () => {
     document.querySelector(".bagSpan").textContent = productNumbers;
   }
 };
-
 const cartNumbers = (products) => {
   let productNumbers = localStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
-  if (productNumbers) {
+  if (productNumbers ) {
+    
+  
     localStorage.setItem("cartNumbers", productNumbers + 1);
     document.querySelector(".bagSpan").textContent = productNumbers + 1;
   } else {
@@ -178,6 +186,34 @@ const displayCart = () => {
     });
   }
 };
+
+
+// const tootTipButton = document.querySelectorAll('.fa-cart-arrow-down')
+
+// for(let o = 0 ; o < tootTipButton.length; o++){
+//   tooltTip.forEach(item => {
+//     tootTipButton[o].addEventListener('click' , () => {
+//       if(item.classList.contains('active')){
+//         item.classList.remove('active')
+//       }else{
+//         item.classList.add('active')
+//       }
+//   })
+//   })
+// }
+
+heartButton.forEach(item => {
+  item.addEventListener('click' , () =>{
+    tooltTip.forEach(item => {
+      if(item.classList.contains('active')){
+              item.classList.remove('active')
+          }else{
+             item.classList.add('active')
+            }
+    })
+  })
+})
+
 onLoading();
 displayCart();
 
