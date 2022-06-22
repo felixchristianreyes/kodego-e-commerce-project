@@ -2,9 +2,12 @@ var countTop = new Date().setHours(new Date().getHours() + 24)
 localStorage.getItem(countTop)
 
 
+
 let previousTime
-setInterval(() =>{
+setInterval((seconds , minutes , hours) =>{
 var currentDate= new Date()
+
+
 const timeBetween =   Math.ceil((countTop - currentDate) / 1000)
 flipAllCard(timeBetween)
 
@@ -12,17 +15,18 @@ previousTime = timeBetween
 
 },1000)
 
+
 function flipAllCard(time){
     const seconds = time % 60
   const minutes = Math.floor(time / 60) % 60
   const hours = Math.floor(time / 3600)
 
-  
-  flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
-  flip(document.querySelector("[data-hours-ones]"), hours % 10)
-  flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10))
-  flip(document.querySelector("[data-minutes-ones]"), minutes % 10)
-  flip(document.querySelector("[data-seconds-tens]"), Math.floor(seconds / 10))
+
+  flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10)),
+  flip(document.querySelector("[data-hours-ones]"), hours % 10),
+  flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10)),
+  flip(document.querySelector("[data-minutes-ones]"), minutes % 10),
+  flip(document.querySelector("[data-seconds-tens]"), Math.floor(seconds / 10)),
   flip(document.querySelector("[data-seconds-ones]"), seconds % 10)
 }
 
@@ -59,3 +63,4 @@ function flip(flipCard , newNumber){
       })
       flipCard.append(topFlip, bottomFlip)
     }
+

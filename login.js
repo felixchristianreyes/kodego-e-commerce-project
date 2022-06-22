@@ -20,6 +20,7 @@ const isEmpty = () =>{
                 window.location.href = "homepage.html"
                 inputEmail.classList.remove('redBorder')
                 inputPass.classList.remove('redBorder')
+                inputNameContainer.innerHTML = ""
                nameValue()
             }
             else{
