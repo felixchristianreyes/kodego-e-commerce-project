@@ -13,7 +13,6 @@ const isEmpty = () => {
   var password = "user1234";
 
   if (inputPass.value && inputEmail.value) {
-    button.removeAttribute("disabled");
     button.addEventListener("click", () => {
       if (inputPass.value === password && inputEmail.value === email) {
         window.location.href = "homepage.html";
