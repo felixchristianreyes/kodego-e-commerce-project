@@ -55,14 +55,14 @@
       <!-- ACCOUNT -->
       <div class="d-flex align-self-center justify-content-end">
         <!-- use if signed-in, remove d-none to show -->
-        <div class="d-flex ">
-          <h5 class="align-self-center m-0">Welcome, <span id="userName"></span></h5>
+        <div id="signedIn" class="d-flex d-none">
+          <h5 class="align-self-center m-0">Welcome, <span id="userName" class="text-capitalize"></span>!</h5>
           <button type="button" class="account-button position-relative text-center mx-2">
             <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
           </button>
         </div>
         <!-- Add d-none to class upon sign-in -->
-        <div>
+        <div id="notSignedIn">
           <button type="button" class="btn btn-brown mx-2">
             <a href="loginPage.html">LOG IN</a>
           </button>
@@ -286,12 +286,17 @@
 
 <script src="./countDown.js"></script>
 <script src="./cart.js"></script>
+<script src="./login.js"></script>
+<script src="./addtoCartAnimation.js"></script>
 
 <script>
-  document.getElementById('userName').innerHTML = localStorage.getItem('textvalue')
+  document.getElementById("userName").innerHTML =
+    localStorage.getItem("textvalue");
+
+  if (document.getElementById("userName").innerHTML != "") {
+    document.getElementById("notSignedIn").classList.add("d-none");
+    document.getElementById("signedIn").classList.remove("d-none");
+  }
 </script>
-
-
-
 
 </html>
