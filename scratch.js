@@ -102,6 +102,7 @@ function judgeVisible() {
   }
 
   if (result[255] === undefined) {
+    alert('You won a prize!');
     bridge.remove();
     h4.remove();
     node.appendChild(voucherImg);
