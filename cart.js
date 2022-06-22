@@ -1,5 +1,5 @@
 const heartButton = document.querySelectorAll(".fa-cart-arrow-down");
-const tooltTip = document.querySelectorAll('.tooltipContainer')
+const productContainer = document.querySelector(".productContainer");
 
 let products = [
   {
@@ -106,11 +106,13 @@ const totalCost = (products) => {
   }
 };
 
+
+
 const displayCart = () => {
   let cartItems = localStorage.getItem("productIncart");
   cartItems = JSON.parse(cartItems);
   let productNumbers = localStorage.getItem("cartNumbers");
-  const productContainer = document.querySelector(".productContainer");
+ 
   let cartCost = localStorage.getItem("totalCost");
 
   if (cartItems && productContainer) {
@@ -174,7 +176,7 @@ const displayCart = () => {
         </div>
 
         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+            <a href="#!" class="text-muted " ><i class="fas fa-times" ></i></a>
         </div>
 
     </div>
@@ -183,36 +185,28 @@ const displayCart = () => {
         `;
       document.querySelector(".totalcost").innerHTML = "₱" + cartCost;
       document.querySelector(".totalItems").innerHTML = productNumbers;
+      
     });
   }
 };
 
+const remove = () => {
+  const products = document.querySelectorAll('.products')
+  let cartItems = localStorage.getItem("productIncart");
+  cartItems = JSON.parse(cartItems);
+  document.querySelector(".bagSpan").textContent = 0
+  let productNumbers = localStorage.getItem("cartNumbers");
+  if (cartItems && productContainer) {
+    Object.values(cartItems).map((item) => {
+      productContainer.innerHTML = ""
+      
+    });
+    document.querySelector(".totalcost").innerHTML = "₱" 
+      document.querySelector(".totalItems").innerHTML = ""
+  
+};
+}
 
-// const tootTipButton = document.querySelectorAll('.fa-cart-arrow-down')
-
-// for(let o = 0 ; o < tootTipButton.length; o++){
-//   tooltTip.forEach(item => {
-//     tootTipButton[o].addEventListener('click' , () => {
-//       if(item.classList.contains('active')){
-//         item.classList.remove('active')
-//       }else{
-//         item.classList.add('active')
-//       }
-//   })
-//   })
-// }
-
-heartButton.forEach(item => {
-  item.addEventListener('click' , () =>{
-    tooltTip.forEach(item => {
-      if(item.classList.contains('active')){
-              item.classList.remove('active')
-          }else{
-             item.classList.add('active')
-            }
-    })
-  })
-})
 
 onLoading();
 displayCart();
