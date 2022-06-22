@@ -107,14 +107,14 @@ textarea {
   color: var(--color-burlywood) !important;
 }
 
-.addtobag {
+.icon-atb {
   font-size: 1.5rem;
   color: var(--color-brown);
   text-decoration: none;
   position: relative;
   z-index: 2;
 }
-.addtobag span {
+.icon-atb span {
   font-size: 2rem;
   position: absolute;
   top: -20px;
