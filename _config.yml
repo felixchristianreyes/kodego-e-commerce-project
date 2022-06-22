@@ -1,5 +1,0 @@
-theme: jekyll-theme-minimal
-image: ghcr.io/owner/image
-  credentials:
-     username: ${{ github.actor }}
-     password: ${{ secrets.ghcr_token }}
