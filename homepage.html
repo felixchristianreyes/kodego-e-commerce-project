@@ -160,8 +160,6 @@
     </div>
 
 
-
-
     <!-- CATEGORY CARDS -->
     <!-- 1-Category card for drinks -->
     <div class="category-card container d-flex p-0 mt-5">
@@ -282,21 +280,22 @@
     </div>
   </div>
 
+  <!--JS SCRIPTS -->
+  <script src="./countDown.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./login.js"></script>
+  <script src="./addtoCartAnimation.js"></script>
+
+  <script>
+    document.getElementById("userName").innerHTML =
+      localStorage.getItem("textvalue");
+
+    if (document.getElementById("userName").innerHTML != "") {
+      document.getElementById("notSignedIn").classList.add("d-none");
+      document.getElementById("signedIn").classList.remove("d-none");
+    }
+  </script>
+
 </body>
-
-<script src="./countDown.js"></script>
-<script src="./cart.js"></script>
-<script src="./login.js"></script>
-<script src="./addtoCartAnimation.js"></script>
-
-<script>
-  document.getElementById("userName").innerHTML =
-    localStorage.getItem("textvalue");
-
-  if (document.getElementById("userName").innerHTML != "") {
-    document.getElementById("notSignedIn").classList.add("d-none");
-    document.getElementById("signedIn").classList.remove("d-none");
-  }
-</script>
 
 </html>

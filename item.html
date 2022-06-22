@@ -43,7 +43,7 @@
         <!-- CATEGORIES -->
         <div class="nav-category-container d-flex justify-content-center text-center  w-50">
           <div class="nav-category mx-3">
-            <a href="product.html">
+            <a href="product.html#brewed">
               <img src="images\cat-coffee.svg" alt="" class="category-item mb-2" />
             </a>
             <p class="font-14">FRESHLY BREWED</p>
@@ -74,15 +74,15 @@
 
         <!-- ACCOUNT -->
         <div class="d-flex align-self-center justify-content-end">
-          <!-- Signed-in, remove d-none to show -->
-          <div class="d-flex">
-            <h5 class="align-self-center m-0">Welcome, <b>Customer!</b></h5>
+          <!-- use if signed-in, remove d-none to show -->
+          <div id="signedIn" class="d-flex d-none">
+            <h5 class="align-self-center m-0">Welcome, <span id="userName" class="text-capitalize"></span>!</h5>
             <button type="button" class="account-button position-relative text-center mx-2">
               <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
             </button>
           </div>
-          <!-- Add d-none to class to upon sign-in -->
-          <div class="d-none">
+          <!-- Add d-none to class upon sign-in -->
+          <div id="notSignedIn">
             <button type="button" class="btn btn-brown mx-2">
               <a href="loginPage.html">LOG IN</a>
             </button>
@@ -91,6 +91,7 @@
             </button>
           </div>
           <button type="button" class="account-button position-relative text-center mx-2">
+
             <a href="cart.html" class="fa-solid fa-bag-shopping account-icons p-0"></a>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               2
@@ -250,6 +251,22 @@
       <div>&copy; 2022 COFFEE TO GO</div>
     </div>
   </div>
+
+  <!--JS SCRIPTS -->
+  <script src="./countDown.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./login.js"></script>
+  <script src="./addtoCartAnimation.js"></script>
+
+  <script>
+    document.getElementById("userName").innerHTML =
+      localStorage.getItem("textvalue");
+
+    if (document.getElementById("userName").innerHTML != "") {
+      document.getElementById("notSignedIn").classList.add("d-none");
+      document.getElementById("signedIn").classList.remove("d-none");
+    }
+  </script>
 
 </body>
 

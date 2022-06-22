@@ -223,6 +223,10 @@ input {
   border-radius: 5px;
 }
 
+.smaller {
+  transform: scale(0.75);
+}
+
 .social-media img {
   width: 30px;
 }
@@ -338,11 +342,6 @@ input {
   margin-bottom: 5px;
 }
 
-.listing-category {
-  border-bottom: 2px dashed #342924;
-  margin-bottom: 2px;
-}
-
 .icon-prop {
   color: #342924;
   opacity: 0.7;
@@ -353,33 +352,15 @@ input {
 
 .icon-like:hover {
   cursor: pointer;
-  color: crimson;
+  color: var(--color-crimson) !important;
 }
 
 .fa-regular.fa-star {
   opacity: 0.25;
 }
 
-.tags-as {
-  font-size: small;
-  color: crimson;
-  border: 1px solid crimson;
-}
-
-.tags-bs {
-  font-size: small;
-  color: burlywood;
-  border: 1px solid burlywood;
-}
-
-.tags-np {
-  font-size: small;
-  color: #342924;
-  border: 1px solid #342924;
-}
-
 .price {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 400;
 }
 

@@ -31,11 +31,11 @@
 
 <body>
   <!-- BACKGROUND -->
-  
+
   <img src="images\background.svg" alt="" id="bg-img" class="img-fluid" />
-  
+
   <div id="page" class="container d-flex flex-column p-0">
-    
+
     <!-- TOP NAV -->
     <div class="sticky-top p-0">
       <div class="top-nav sticky-top d-flex justify-content-between px-5 py-3">
@@ -47,7 +47,7 @@
         <!-- CATEGORIES -->
         <div class="nav-category-container d-flex justify-content-center text-center  w-50">
           <div class="nav-category mx-3">
-            <a href="product.html">
+            <a href="product.html#brewed">
               <img src="images\cat-coffee.svg" alt="" class="category-item mb-2" />
             </a>
             <p class="font-14">FRESHLY BREWED</p>
@@ -75,18 +75,18 @@
           </div>
         </div>
 
-               <!-- ACCOUNT -->
-              
+        <!-- ACCOUNT -->
+
         <div class="d-flex align-self-center justify-content-end">
-          <!-- Signed-in, remove d-none to show -->
-          <div class="d-flex">
-            <h5 class="align-self-center m-0">Welcome, <span id="userName"></span></h5>
+          <!-- use if signed-in, remove d-none to show -->
+          <div id="signedIn" class="d-flex d-none">
+            <h5 class="align-self-center m-0">Welcome, <span id="userName" class="text-capitalize"></span>!</h5>
             <button type="button" class="account-button position-relative text-center mx-2">
               <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
             </button>
           </div>
-          <!-- Add d-none to class to upon sign-in -->
-          <div class="d-none">
+          <!-- Add d-none to class upon sign-in -->
+          <div id="notSignedIn">
             <button type="button" class="btn btn-brown mx-2">
               <a href="loginPage.html">LOG IN</a>
             </button>
@@ -95,12 +95,10 @@
             </button>
           </div>
           <button type="button" class="account-button position-relative text-center mx-2">
-            <a href="cart.html" class="fa-solid fa-bag-shopping account-icons p-0"></a>
 
+            <a href="cart.html" class="fa-solid fa-bag-shopping account-icons p-0"></a>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
               0
-
-
             </span>
           </button>
         </div>
@@ -166,33 +164,80 @@
     </div>
 
     <div id="main_content" class="container p-0">
-      <!-- ADS CAROUSEL -->
-      <div id="top" class="anchor-top"></div>
-      <div id="ads-carousel" class="container p-0 w-75 mb-3">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-          </div>
 
+      <!-- PROMO CAROUSEL -->
+      <div id="top" class="anchor-top"></div>
+      <div id="ads-carousel" class="container p-0 smaller top-0">
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="true">
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000">
+            <div class="carousel-item active" data-bs-interval="5000">
               <a href="promopage.html">
                 <img src="images\ads1.gif" class="d-block w-100" alt="..." /></a>
+
+              <!--COUNTDOWN-->
+              <div id="countdown-homepage" class="container my-2 d-flex gap-4 gap-3 position-absolute">
+                <div class="cotainer-segment d-flex gap-3 flex-column align-items-center gap-4">
+                  <div class="hrs fw-bold fs-1">HOURS </div>
+                  <div class="segment d-flex gap-3  ">
+                    <div class="flip-card flip d-inline-flex flex-column  " data-hours-tens>
+                      <div class="top">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                    <div class="flip-card flip d-inline-flex flex-column" data-hours-ones>
+                      <div class="top">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-end">
+                  <h1 class="display-1">:</h1>
+                </div>
+                <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                  <div class="hrs fw-bold fs-1">MINUTES</div>
+                  <div class="segment d-flex gap-3  ">
+                    <div class="flip-card flip d-inline-flex flex-column  " data-minutes-tens>
+                      <div class="top">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                    <div class="flip-card flip d-inline-flex flex-column " data-minutes-ones>
+                      <div class="top   ">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-end">
+                  <h1 class="display-1">:</h1>
+                </div>
+                <div class="cotainer-segment d-flex gap-4 flex-column align-items-center">
+                  <div class="hrs fw-bold fs-1">SECONDS</div>
+                  <div class="segment d-flex gap-3  ">
+                    <div class="flip-card flip d-inline-flex flex-column " data-seconds-tens>
+                      <div class="top   ">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                    <div class="flip-card flip d-inline-flex flex-column " data-seconds-ones>
+                      <div class="top   ">8</div>
+                      <div class="bottom align-items-end d-flex  ">8</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
-              <a href="promopage.html#new">
+            <div class="carousel-item" data-bs-interval="5000">
+              <a href="#">
+                <img src="images\promo-ticket.gif" class="d-block w-100" alt="..." /></a>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <a href="#">
                 <img src="images\ads2.gif" class="d-block w-100" alt="..." /></a>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
@@ -200,9 +245,9 @@
         </div>
       </div>
 
-    
+
       <!-- LISTING -->
- 
+
       <div class="container">
         <img src="images\title-all-prod.svg" alt="" class="img-fluid mb-3" />
       </div>
@@ -210,7 +255,7 @@
         <!-- FRESHLY BREWED -->
 
         <div id="brewed" class="anchor-top"></div>
-        <div class="container listing-category mt-3">
+        <div class="container">
           <div id="fresh-brew" class="anchor-top"></div>
           <h2 class="category-title text-center fw-bold text-brown opacity-75">
             Freshly Brewed Coffee & Tea
@@ -228,22 +273,33 @@
                     <h5 class="card-title text-center">Iced Latte</h5>
                     <div class="text-center price">&#8369;125</div>
                   </div>
-                  <div>
-                    <span class="tags-bs px-1">Best Seller</span>
+
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-solid fa-solid fa-cart-arrow-down icon-like icon-prop "  ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -258,20 +314,29 @@
                     <h5 class="card-title text-center">Iced Mocha</h5>
                     <div class="text-center price">&#8369;150</div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">add tag here</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer ' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -288,20 +353,29 @@
                     <h5 class="card-title text-center">Iced Americano</h5>
                     <div class="text-center price">&#8369;100</div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">add tag here</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -320,20 +394,29 @@
                     </h5>
                     <div class="text-center price">&#8369;150</div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">add tag here</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -353,20 +436,29 @@
                         class="text-danger price">&#8369;120</span>
                     </div>
                   </div>
-                  <div class="">
-                    <span class="tags-as px-1">Anniversary Special</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -385,20 +477,29 @@
                     </h5>
                     <div class="text-center price">&#8369;200</div>
                   </div>
-                  <div class="">
-                    <span class="tags-np px-1">New Product</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -419,20 +520,29 @@
                     <h5 class="card-title text-center">Hot Americano</h5>
                     <div class="text-center price">&#8369;100</div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-bs px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25"> 
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -452,20 +562,29 @@
                         class="text-danger price">&#8369;100</span>
                     </div>
                   </div>
-                  <div class="">
-                    <span class="tags-as px-1">Anniversary Special</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -482,20 +601,29 @@
                     <h5 class="card-title text-center">Hot Green Tea</h5>
                     <div class="text-center price">&#8369;200</div>
                   </div>
-                  <div class="">
-                    <span class="tags-np px-1">New Product</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
+                      <i class="fa-regular fa-star icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -503,10 +631,11 @@
             </div>
           </div>
         </div>
+        <div class="dashedline mb-3"></div>
 
         <!-- FRESHLY BAKED -->
         <div id="baked" class="anchor-top"></div>
-        <div class="container listing-category mt-3">
+        <div class="container">
           <h2 class="category-title text-center fw-bold text-brown opacity-75">
             Freshly Baked Pastries
           </h2>
@@ -520,22 +649,33 @@
                 <div class="card-body py-2">
                   <div class="card-title-container">
                     <h5 class="card-title text-center">Croissant</h5>
-                    <div class="text-center price">&#8369;200</div>
+                    <div class="text-center">
+                      <span class="text-muted price discount px-2">&#8369;200</span><span
+                        class="text-danger price">&#8369;160</span>
+                    </div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
                   <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -552,22 +692,33 @@
                     <h5 class="card-title text-center">
                       Strawberry Cheesecake
                     </h5>
-                    <div class="text-center price">&#8369;175</div>
+                    <div class="text-center">
+                      <span class="text-muted price discount px-2">&#8369;175</span><span
+                        class="text-danger price">&#8369;140</span>
+                    </div>
                   </div>
-                  <div class="">
-                    <span class="tags-bs px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
                   <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -575,10 +726,11 @@
             </div>
           </div>
         </div>
+        <div class="dashedline mb-3"></div>
 
         <!-- COFFEE BEANS -->
         <div id="beans" class="anchor-top"></div>
-        <div class="container listing-category mt-3">
+        <div class="container">
           <h2 class="category-title text-center fw-bold text-brown opacity-75">
             Premium Roasted Coffee Beans
           </h2>
@@ -594,22 +746,34 @@
                     <h5 class="card-title text-center">
                       Robusta Coffee Beans
                     </h5>
-                    <div class="text-center price">Starts at &#8369;100</div>
+                    <div class="text-center">
+                      <span>Starts at </span>
+                      <span class="text-muted price discount px-2">&#8369;100</span><span
+                        class="text-danger price">&#8369;80</span>
+                    </div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
                   <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
-                    </div>
-                    <div class="w-75 text-end">
+                    <div class="w-75 align-self-center">
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -628,21 +792,29 @@
                     </h5>
                     <div class="text-center price">Starts at &#8369;100</div>
                   </div>
-                  <div class="">
-                    <span class="tags-bs px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -650,10 +822,11 @@
             </div>
           </div>
         </div>
+        <div class="dashedline mb-3"></div>
 
         <!-- MERCH -->
         <div id="merch" class="anchor-top"></div>
-        <div class="container listing-category mt-3">
+        <div class="container">
           <h2 class="category-title text-center fw-bold text-brown opacity-75">
             Merch for the Coffee Lovers
           </h2>
@@ -669,20 +842,29 @@
                     <h5 class="card-title text-center">Coffee Mug</h5>
                     <div class="text-center price">&#8369;125</div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special d-none">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
-                  <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
+                  <div class=" container d-flex p-0 my-2">
+                    <!-- added align-self-center -->
+                    <div class="w-75 align-self-center">
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star icon-prop"></i>
+                      <i class="fa-solid fa-star-half-stroke icon-prop"></i>
                     </div>
-                    <div class="w-75 text-end">
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-solid fa-star icon-prop"></i>
-                      <i class="fa-regular fa-star icon-prop"></i>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -697,22 +879,33 @@
                 <div class="card-body py-2">
                   <div class="card-title-container">
                     <h5 class="card-title text-center">Glass Tumbler</h5>
-                    <div class="text-center price">&#8369;200</div>
+                    <div class="text-center">
+                      <span class="text-muted price discount px-2">&#8369;200</span><span
+                        class="text-danger price">&#8369;160</span>
+                    </div>
                   </div>
-                  <div class="invisible">
-                    <span class="tags-as px-1">Best Seller</span>
+                  <!-- Tags -->
+                  <div class="tags d-flex justify-content-center align-items-center">
+                    <!-- sample tags -->
+                    <div class="anniv-special">Anniversary Special</div>
+                    <div class="best-seller d-none">Best Seller</div>
+                    <div class="new-arrival d-none">New Arrival</div>
                   </div>
                   <div class="container d-flex p-0 my-2">
-                    <div class="w-25">
-                      <div class='tooltipContainer' data-tooltip="Added to cart" > </div>
-                      <a class="fa-regular fa-solid fa-cart-arrow-down icon-like icon-prop" ></a>
-                    </div>
-                    <div class="w-75 text-end">
+                    <div class="w-75 align-self-center">
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-solid fa-star icon-prop"></i>
                       <i class="fa-regular fa-star icon-prop"></i>
+                    </div>
+                    <div class="w-25 text-end px-1">
+                      <!-- use this 'a' for 'add to bag' icon -->
+                      <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>+</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -752,18 +945,30 @@
       <div>&copy; 2022 COFFEE TO GO</div>
     </div>
   </div>
-  
+
+  <!--JS SCRIPTS -->
+  <script src="./countDown.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./login.js"></script>
+  <script src="./addtoCartAnimation.js"></script>
+
+  <script>
+    document.getElementById("userName").innerHTML =
+      localStorage.getItem("textvalue");
+
+    if (document.getElementById("userName").innerHTML != "") {
+      document.getElementById("notSignedIn").classList.add("d-none");
+      document.getElementById("signedIn").classList.remove("d-none");
+    }
+
+    // POPOVERS
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    const popover = new bootstrap.Popover('.popover-dismiss', {
+      trigger: 'focus'
+    })
+  </script>
 
 </body>
-
-<script src="./cart.js"></script>
-<script src="./login.js"></script>
-<script src="./addtoCartAnimation.js"></script>
-<script>
-  document.getElementById('userName').innerHTML = localStorage.getItem('textvalue')
-</script>
-
-</html>
-
 
 </html>
