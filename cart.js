@@ -1,44 +1,44 @@
-const heartButton = document.querySelectorAll(".fa-cart-arrow-down");
+const heartButton = document.querySelectorAll(".addtobag");
 const productContainer = document.querySelector(".productContainer");
 
 let products = [
   {
-    id:1,
+    id: 1,
     name: "Iced Latte",
     tag: "latte",
     price: 125,
     inCart: 0,
   },
   {
-    id:2,
+    id: 2,
     name: "Iced Mocha",
     tag: "mocha",
     price: 150,
     inCart: 0,
   },
   {
-    id:3,
+    id: 3,
     name: "Iced Americano",
     tag: "americano",
     price: 100,
     inCart: 0,
   },
   {
-    id:4,
+    id: 4,
     name: "Iced Orange Espresso",
     tag: "orange-espresso",
     price: 150,
     inCart: 0,
   },
   {
-    id:5,
+    id: 5,
     name: "Iced Cappuccino",
     tag: "cappuccino",
     price: 150,
     inCart: 0,
   },
   {
-    id:6,
+    id: 6,
     name: "Iced Macha Green Tea",
     tag: "macha",
     price: 200,
@@ -63,9 +63,7 @@ const onLoading = () => {
 const cartNumbers = (products) => {
   let productNumbers = localStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
-  if (productNumbers ) {
-    
-  
+  if (productNumbers) {
     localStorage.setItem("cartNumbers", productNumbers + 1);
     document.querySelector(".bagSpan").textContent = productNumbers + 1;
   } else {
@@ -106,13 +104,11 @@ const totalCost = (products) => {
   }
 };
 
-
-
 const displayCart = () => {
   let cartItems = localStorage.getItem("productIncart");
   cartItems = JSON.parse(cartItems);
   let productNumbers = localStorage.getItem("cartNumbers");
- 
+
   let cartCost = localStorage.getItem("totalCost");
 
   if (cartItems && productContainer) {
@@ -185,30 +181,24 @@ const displayCart = () => {
         `;
       document.querySelector(".totalcost").innerHTML = "₱" + cartCost;
       document.querySelector(".totalItems").innerHTML = productNumbers;
-      
     });
   }
 };
 
 const remove = () => {
-  const products = document.querySelectorAll('.products')
+  const products = document.querySelectorAll(".products");
   let cartItems = localStorage.getItem("productIncart");
   cartItems = JSON.parse(cartItems);
-  document.querySelector(".bagSpan").textContent = 0
+  document.querySelector(".bagSpan").textContent = 0;
   let productNumbers = localStorage.getItem("cartNumbers");
   if (cartItems && productContainer) {
     Object.values(cartItems).map((item) => {
-      productContainer.innerHTML = ""
-      
+      productContainer.innerHTML = "";
     });
-    document.querySelector(".totalcost").innerHTML = "₱" 
-      document.querySelector(".totalItems").innerHTML = ""
-  
+    document.querySelector(".totalcost").innerHTML = "₱";
+    document.querySelector(".totalItems").innerHTML = "";
+  }
 };
-}
-
 
 onLoading();
 displayCart();
-
-

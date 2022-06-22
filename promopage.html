@@ -55,14 +55,14 @@
         <!-- ACCOUNT -->
         <div class="d-flex align-self-center justify-content-end">
           <!-- Signed-in, remove d-none to show -->
-          <div class="d-flex">
-            <h5 class="align-self-center m-0">Welcome, <b>Customer!</b></h5>
+          <div id="signedIn" class="d-flex d-none">
+            <h5 class="align-self-center m-0">Welcome, <span id="userName" class="text-capitalize"></span>!</h5>
             <button type="button" class="account-button position-relative text-center mx-2">
               <a href="profile-account.html" class="fa-solid fa-user account-icons"></a>
             </button>
           </div>
           <!-- Add d-none to class to upon sign-in -->
-          <div class="d-none">
+          <div id="notSignedIn">
             <button type="button" class="btn btn-brown mx-2">
               <a href="loginPage.html">LOG IN</a>
             </button>
@@ -75,9 +75,6 @@
             <i class="fa-solid fa-bag-shopping account-icons p-0"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger bagSpan">
               0
-
-
-
             </span>
           </button>
         </div>
@@ -237,7 +234,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -277,7 +275,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -326,7 +325,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -366,7 +366,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -416,7 +417,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -466,7 +468,8 @@
                   </div>
                   <div class="w-25 text-end px-1">
                     <!-- use this 'a' for 'add to bag' icon -->
-                    <a class="icon-like addtobag" title="Add this to bag">
+                    <a class="icon-like addtobag" data-bs-container="body" data-bs-toggle="popover"
+                      data-bs-placement="top" data-bs-content="Added to bag" tabindex="0" data-bs-trigger="focus">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span>+</span>
                     </a>
@@ -509,8 +512,29 @@
     </div>
   </div>
 
+  <!--JS SCRIPTS -->
   <script src="./countDown.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./login.js"></script>
+  <script src="./addtoCartAnimation.js"></script>
+
+  <script>
+    document.getElementById("userName").innerHTML =
+      localStorage.getItem("textvalue");
+
+    if (document.getElementById("userName").innerHTML != "") {
+      document.getElementById("notSignedIn").classList.add("d-none");
+      document.getElementById("signedIn").classList.remove("d-none");
+    }
+
+    // POPOVERS
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    const popover = new bootstrap.Popover('.popover-dismiss', {
+      trigger: 'focus'
+    })
+  </script>
+
 </body>
-<script src="./cart.js"></script>
 
 </html>
