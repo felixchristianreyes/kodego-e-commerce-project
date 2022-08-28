@@ -15,7 +15,7 @@ const isEmpty = () => {
   if (inputPass.value && inputEmail.value) {
     button.addEventListener("click", () => {
       if (inputPass.value === password && inputEmail.value === email) {
-        window.location.href = "homepage.html";
+        window.location.href = "index.html";
         inputEmail.classList.remove("redBorder");
         inputPass.classList.remove("redBorder");
         inputNameContainer.innerHTML = "";
